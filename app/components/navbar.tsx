@@ -15,8 +15,14 @@ export default function Navbar({ t, lang, setLang, darkMode, setDarkMode }: Navb
       <div className="mx-auto flex h-12 max-w-5xl items-center justify-between px-6 text-xs font-normal tracking-tight text-[#1d1d1f]/80 dark:text-[#f5f5f7]/80">
         {/* ICONO NOMBRE */}
         <div className="flex items-center gap-6 sm:gap-8">
-          <a href="/" className="">
-            {t("navbar.name")}
+          <a href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="..."
+          >
+            PAG
           </a>
         </div>
         {/* ENLACES DE NAVEGACIÓN */}
