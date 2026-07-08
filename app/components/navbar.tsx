@@ -56,7 +56,7 @@ export default function Navbar({ t, lang, setLang, darkMode, setDarkMode }: Navb
             <button
               onClick={() => setDarkMode(!darkMode)}
               className=""
-              title={darkMode ? "Modo Claro" : "Modo Oscuro"}
+              title={darkMode ? t("navbar.lightMode") : t("navbar.darkMode")}
               aria-label="Toggle theme"
             >
               {darkMode ? <Sun size={14} /> : <Moon size={14} />}
@@ -65,6 +65,7 @@ export default function Navbar({ t, lang, setLang, darkMode, setDarkMode }: Navb
               href="/CV_Pablo_Abad.pdf"
               download="CV_Pablo_Abad.pdf"
               className=""
+              title={t("navbar.downloadCV")}
             >
               {t("navbar.downloadCV")}
             </a>

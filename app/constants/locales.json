@@ -7,7 +7,9 @@
     "navbar.projects": "Proyectos",
     "navbar.education": "Educación",
     "navbar.contact": "Contacto",
-    "navbar.downloadCV": "Descargar CV"
+    "navbar.downloadCV": "Descargar CV",
+    "navbar.lightMode": "Modo Claro",
+    "navbar.darkMode": "Modo Oscuro"
   },
   "en": {
     "navbar.name": "PAG",
@@ -17,6 +19,8 @@
     "navbar.projects": "Projects",
     "navbar.education": "Education",
     "navbar.contact": "Contact",
-    "navbar.downloadCV": "Download CV"
+    "navbar.downloadCV": "Download CV",
+    "navbar.lightMode": "Light Mode",
+    "navbar.darkMode": "Dark Mode"
   }
 }

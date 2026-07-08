@@ -38,7 +38,7 @@ export default function Home() {
         <Education t={t} />
         <Contact t={t} /> */}
       </main>
-      {/* <Footer /> */}
+      <Footer t={t} />
     </>
   );
 }
