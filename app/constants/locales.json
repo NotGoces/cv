@@ -1,0 +1,22 @@
+{
+  "es": {
+    "navbar.name": "PAG",
+    "navbar.about": "Sobre mi",
+    "navbar.experience": "Experiencia",
+    "navbar.skills": "Habilidades",
+    "navbar.projects": "Proyectos",
+    "navbar.education": "Educación",
+    "navbar.contact": "Contacto",
+    "navbar.downloadCV": "Descargar CV"
+  },
+  "en": {
+    "navbar.name": "PAG",
+    "navbar.about": "About Me",
+    "navbar.experience": "Experience",
+    "navbar.skills": "Skills",
+    "navbar.projects": "Projects",
+    "navbar.education": "Education",
+    "navbar.contact": "Contact",
+    "navbar.downloadCV": "Download CV"
+  }
+}
