@@ -1,17 +1,44 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Navbar from "./components/navbar";
+import Hero from "./components/hero";
+import About from "./components/about";
+import Experience from "./components/experience";
+import Skills from "./components/skills";
+import Projects from "./components/projects";
+import Education from "./components/education";
+import Contact from "./components/contact";
+import Footer from "./components/footer";
+import { Lang, createT } from "./constants/translations";
+
 export default function Home() {
-  return (
-    <main className="min-h-screen bg-[#ffffff] text-[#1d1d1f] antialiased selection:bg-black selection:text-white">
-      {/* Espacio reservado para la Navbar */}
-      
-      {/* Sección Principal (Hero) */}
-      <section className="flex min-h-screen flex-col items-center justify-center p-6 text-center">
-        <h1 className="text-5xl font-extrabold tracking-tight sm:text-7xl">
-          Pablo Abad Goldsmith
-        </h1>
-        <p className="mt-4 text-xl text-gray-500 max-w-md font-medium">
-          Desarrollador Front-End
-        </p>
-      </section>
-    </main>
+  const [lang, setLang] = useState<Lang>("es");
+  const [darkMode, setDarkMode] = useState<boolean>(true);
+
+  const t = createT(lang);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
+ return (
+    <>
+      <Navbar t={t} lang={lang} setLang={setLang} darkMode={darkMode} setDarkMode={setDarkMode} />
+      <main>
+        {/* <Hero t={t} />
+        <About t={t} />
+        <Experience t={t} />
+        <Skills t={t} />
+        <Projects t={t} />
+        <Education t={t} />
+        <Contact t={t} /> */}
+      </main>
+      {/* <Footer /> */}
+    </>
   );
 }
