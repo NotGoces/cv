@@ -11,14 +11,14 @@ import Image from "next/image";
 export default function About() {
     return (
         <section id="about" className="w-full bg-theme px-6 py-24 transition-colors duration-300">
-            <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-12 md:flex-row md:items-center md:gap-16">
-                <div className="w-full max-w-xs shrink-0 md:max-w-sm">
+            <div className="mx-auto flex w-full max-w-5xl flex-row items-center gap-6 sm:gap-8 md:gap-12">
+                <div className="w-full max-w-[140px] shrink-0 sm:max-w-[180px] md:max-w-[220px]">
                     <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-theme bg-surface-muted">
                         <Image
                             src="/projects/pabloabad.jpg"
                             alt="Pablo Abad"
                             fill
-                            sizes="(max-width: 768px) 100vw, 320px"
+                            sizes="(max-width: 768px) 100vw, 240px"
                             className="object-cover"
                         />
                     </div>
