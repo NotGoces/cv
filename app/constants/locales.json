@@ -51,7 +51,9 @@
     "contact.message": "Mensaje",
     "contact.submit": "Enviar mensaje",
     "footer.copyright": "© 2026 Pablo Abad",
-    "footer.backToTop": "Volver arriba"
+    "footer.backToTop": "Volver arriba",
+    "navbar.english": "English",
+    "navbar.spanish": "Español"
   },
   "en": {
     "navbar.name": "PAG",
@@ -105,6 +107,8 @@
     "contact.message": "Message",
     "contact.submit": "Send message",
     "footer.copyright": "© 2026 Pablo Abad",
-    "footer.backToTop": "Back to top"
+    "footer.backToTop": "Back to top",
+    "navbar.english": "English",
+    "navbar.spanish": "Español"
   }
 }

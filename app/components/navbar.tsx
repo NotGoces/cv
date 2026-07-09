@@ -12,7 +12,7 @@ interface NavbarProps {
 export default function Navbar({ t, lang, setLang, darkMode, setDarkMode }: NavbarProps) {
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-theme bg-surface/70 backdrop-blur-md transition-colors duration-300">
-      <div className="mx-auto flex h-12 max-w-5xl items-center justify-between px-6 text-xs font-normal tracking-tight text-muted">
+      <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6 text-xs font-normal tracking-tight text-muted">
         <div className="flex items-center gap-6 sm:gap-8">
           <a
             href="#"
@@ -26,25 +26,21 @@ export default function Navbar({ t, lang, setLang, darkMode, setDarkMode }: Navb
           </a>
         </div>
         <div className="flex items-center gap-6 sm:gap-8">
-          <a href="#about" className="transition-colors hover:text-theme">
-            {t("navbar.about")}
-          </a>
-          <a href="#experience" className="transition-colors hover:text-theme">
-            {t("navbar.experience")}
-          </a>
-          <a href="#skills" className="transition-colors hover:text-theme">
-            {t("navbar.skills")}
-          </a>
-          <a href="#education" className="transition-colors hover:text-theme">
-            {t("navbar.education")}
-          </a>
-          <a href="#contact" className="transition-colors hover:text-theme">
-            {t("navbar.contact")}
-          </a>
+          {["about", "experience", "skills", "education", "contact"].map((section) => (
+            <a
+              key={section}
+              href={`#${section}`}
+              className="transition-colors hover:text-theme"
+            >
+              {t(`navbar.${section}`)}
+            </a>
+          ))}
           <div className="flex items-center gap-3">
             <button
               onClick={() => setLang(lang === "es" ? "en" : "es")}
               className="transition-colors hover:text-theme"
+              title={lang === "es" ? t("navbar.english") : t("navbar.spanish")}
+              aria-label="Toggle language"
             >
               {lang === "es" ? "en" : "es"}
             </button>
