@@ -6,15 +6,21 @@
 // Nada de bullets largos — esto es la sección más "ligera" de toda la página
 "use client";
 
+import Image from "next/image";
+
 export default function About() {
     return (
         <section id="about" className="w-full bg-theme px-6 py-24 transition-colors duration-300">
             <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-12 md:flex-row md:items-center md:gap-16">
                 <div className="w-full max-w-xs shrink-0 md:max-w-sm">
                     <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-theme bg-surface-muted">
-                        <div className="flex h-full w-full items-center justify-center">
-                            <span className="font-mono text-xs text-muted/60">1:1</span>
-                        </div>
+                        <Image
+                            src="/projects/pabloabad.jpg"
+                            alt="Pablo Abad"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 320px"
+                            className="object-cover"
+                        />
                     </div>
                 </div>
 
