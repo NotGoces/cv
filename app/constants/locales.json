@@ -53,7 +53,8 @@
     "footer.copyright": "© 2026 Pablo Abad",
     "footer.backToTop": "Volver arriba",
     "navbar.english": "English",
-    "navbar.spanish": "Español"
+    "navbar.spanish": "Español",
+    "navbar.viewOnGitHub": "Ver en GitHub"
   },
   "en": {
     "navbar.name": "PAG",
@@ -109,6 +110,7 @@
     "footer.copyright": "© 2026 Pablo Abad",
     "footer.backToTop": "Back to top",
     "navbar.english": "English",
-    "navbar.spanish": "Español"
+    "navbar.spanish": "Español",
+    "navbar.viewOnGitHub": "View on GitHub"
   }
 }

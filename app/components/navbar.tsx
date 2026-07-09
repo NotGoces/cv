@@ -15,12 +15,11 @@ export default function Navbar({ t, lang, setLang, darkMode, setDarkMode }: Navb
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6 text-xs font-normal tracking-tight text-muted">
         <div className="flex items-center gap-6 sm:gap-8">
           <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-            className="text-theme transition-colors hover:text-muted"
+            href="https://github.com/notgoces"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-theme transition-colors hover:text-muted font-medium tracking-wider text-sm"
+            title={t("navbar.viewOnGitHub")}
           >
             PAG
           </a>
