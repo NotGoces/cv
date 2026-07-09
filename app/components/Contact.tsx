@@ -10,10 +10,11 @@ import { useState } from "react";
 import { SiGithub, SiWhatsapp } from "@icons-pack/react-simple-icons";
 import { FaLinkedin } from "react-icons/fa";
 import { Mail } from "lucide-react";
+import type { TranslationFn } from "../constants/translations";
 
 const EMAIL = "gocesmusic@gmail.com";
 
-export default function Contact() {
+export default function Contact({ t }: { t: TranslationFn }) {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
@@ -27,20 +28,20 @@ export default function Contact() {
     };
 
     return (
-        <section id="contacto" className="w-full bg-theme px-6 py-24 transition-colors duration-300">
+        <section id="contact" className="w-full bg-theme px-6 py-24 transition-colors duration-300">
             <div className="mx-auto flex w-full max-w-5xl flex-col gap-14 md:flex-row md:gap-20">
                 <div className="flex flex-1 flex-col items-start">
                     <h2 className="text-3xl font-semibold tracking-tight text-theme sm:text-4xl">
-                        Hablamos
+                        {t("contact.title")}
                     </h2>
                     <p className="mt-5 max-w-sm text-base leading-relaxed text-muted sm:text-lg">
-                        Si tienes un proyecto en mente, una oportunidad o
-                        simplemente quieres saludar, aquí me encuentras.
+                        {t("contact.description")}
                     </p>
 
                     <div className="mt-8 flex flex-col gap-4">
                         <a
                             href={`mailto:${EMAIL}`}
+                            aria-label={t("contact.emailLink")}
                             className="flex items-center gap-3 text-sm text-muted transition-colors hover:text-theme"
                         >
                             <Mail size={17} />
@@ -50,6 +51,7 @@ export default function Contact() {
                             href="https://www.linkedin.com/in/pabloabadgoldsmith/"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label={t("contact.linkedinLink")}
                             className="flex items-center gap-3 text-sm text-muted transition-colors hover:text-theme"
                         >
                             <FaLinkedin size={17} />
@@ -59,6 +61,7 @@ export default function Contact() {
                             href="https://github.com/NotGoces"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label={t("contact.githubLink")}
                             className="flex items-center gap-3 text-sm text-muted transition-colors hover:text-theme"
                         >
                             <SiGithub size={17} color="currentColor" />
@@ -68,6 +71,7 @@ export default function Contact() {
                             href="https://wa.me/34XXXXXXXXX"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label={t("contact.whatsappLink")}
                             className="flex items-center gap-3 text-sm text-muted transition-colors hover:text-theme"
                         >
                             <SiWhatsapp size={17} color="currentColor" />
@@ -79,7 +83,7 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} className="flex flex-1 flex-col gap-5">
                     <div className="flex flex-col gap-1.5">
                         <label htmlFor="name" className="text-xs font-medium text-muted">
-                            Nombre
+                            {t("contact.name")}
                         </label>
                         <input
                             id="name"
@@ -93,7 +97,7 @@ export default function Contact() {
 
                     <div className="flex flex-col gap-1.5">
                         <label htmlFor="email" className="text-xs font-medium text-muted">
-                            Email
+                            {t("contact.email")}
                         </label>
                         <input
                             id="email"
@@ -107,7 +111,7 @@ export default function Contact() {
 
                     <div className="flex flex-col gap-1.5">
                         <label htmlFor="message" className="text-xs font-medium text-muted">
-                            Mensaje
+                            {t("contact.message")}
                         </label>
                         <textarea
                             id="message"
@@ -123,7 +127,7 @@ export default function Contact() {
                         type="submit"
                         className="mt-2 self-start rounded-full bg-theme px-6 py-3 text-sm font-medium text-theme transition-colors"
                     >
-                        Enviar mensaje
+                        {t("contact.submit")}
                     </button>
                 </form>
             </div>

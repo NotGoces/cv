@@ -6,6 +6,8 @@
 
 "use client";
 
+import type { TranslationFn } from "../constants/translations";
+
 interface EducationItem {
     title: string;
     institution: string;
@@ -14,32 +16,29 @@ interface EducationItem {
     current?: boolean;
 }
 
-const EDUCATION: EducationItem[] = [
-    {
-        title: "Especialización en IA y Big Data",
-        institution: "Nombre del centro",
-        period: "2025 — Actualidad",
-        description:
-            "Ampliando conocimientos en inteligencia artificial y procesamiento de grandes volúmenes de datos.",
-        current: true,
-    },
-    {
-        title: "Desarrollo de Aplicaciones Web (DAW)",
-        institution: "Nombre del centro",
-        period: "2020 — 2022",
-        description:
-            "Formación en desarrollo frontend y backend, bases de datos y despliegue de aplicaciones web.",
-    },
-];
-
-export default function Education() {
-    const inset = 50 / EDUCATION.length;
+export default function Education({ t }: { t: TranslationFn }) {
+    const education: EducationItem[] = [
+        {
+            title: t("education.specializationTitle"),
+            institution: t("education.specializationInstitution"),
+            period: t("education.specializationPeriod"),
+            description: t("education.specializationDescription"),
+            current: true,
+        },
+        {
+            title: t("education.dawTitle"),
+            institution: t("education.dawInstitution"),
+            period: t("education.dawPeriod"),
+            description: t("education.dawDescription"),
+        },
+    ];
+    const inset = 50 / education.length;
 
     return (
-        <section id="educacion" className="w-full bg-theme px-6 py-24 transition-colors duration-300">
+        <section id="education" className="w-full bg-theme px-6 py-24 transition-colors duration-300">
             <div className="mx-auto w-full max-w-5xl">
                 <h2 className="text-3xl font-semibold tracking-tight text-theme sm:text-4xl">
-                    Educación
+                    {t("education.title")}
                 </h2>
 
                 <div className="relative mt-16 flex flex-col gap-14 md:flex-row md:gap-8">
@@ -50,7 +49,7 @@ export default function Education() {
                         style={{ left: `${inset}%`, right: `${inset}%` }}
                     />
 
-                    {EDUCATION.map((item) => (
+                    {education.map((item) => (
                         <div
                             key={item.title}
                             className="relative flex flex-1 gap-8 pl-8 md:flex-col md:items-start md:gap-0 md:pl-0 md:pt-8"

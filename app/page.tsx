@@ -5,7 +5,7 @@ import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
-import Experience from "./components/Experience";
+import Projects from "./components/projects";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Footer from "./components/footer";
@@ -50,14 +50,14 @@ export default function Home() {
     <>
       <Navbar t={t} lang={lang} setLang={setLang} darkMode={darkMode} setDarkMode={setDarkMode} />
       <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Skills />
-        <Education />
-        <Contact />
+        <Hero t={t} />
+        <About t={t} />
+        <Projects t={t} />
+        <Skills t={t} />
+        <Education t={t} />
+        <Contact t={t} />
       </main>
-      <Footer />
+      <Footer t={t} />
     </>
   );
 }

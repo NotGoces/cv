@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-
-const ROLES = ["Frontend Developer", "React + Typescript + Tailwind"];
+import type { TranslationFn } from "../constants/translations";
 
 const TYPE_SPEED = 50;
 const DELETE_SPEED = 40;
@@ -52,14 +51,15 @@ function useTypewriter(words: string[]) {
     return text;
 }
 
-export default function Hero() {
-    const typed = useTypewriter(ROLES);
+export default function Hero({ t }: { t: TranslationFn }) {
+    const roles = [t("hero.roleFrontend"), t("hero.roleStack")];
+    const typed = useTypewriter(roles);
 
     return (
         <section className="relative flex min-h-[92vh] w-full flex-col items-center justify-center bg-theme px-6 transition-colors duration-300">
             <div className="mx-auto flex w-full max-w-5xl flex-col items-start">
                 <h1 className="text-5xl font-semibold tracking-tight text-theme sm:text-7xl">
-                    Pablo Abad Goldsmith
+                    {t("hero.name")}
                 </h1>
 
                 <div className="mt-5 flex items-center font-mono text-lg text-muted sm:text-2xl">

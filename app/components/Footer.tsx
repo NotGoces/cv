@@ -3,16 +3,17 @@
 import { ArrowUp } from "lucide-react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiGmail, SiWhatsapp } from "@icons-pack/react-simple-icons";
+import type { TranslationFn } from "../constants/translations";
 
 const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
-export default function Footer() {
+export default function Footer({ t }: { t: TranslationFn }) {
     return (
         <footer className="w-full border-t border-theme bg-surface transition-colors duration-300">
             <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-6 py-6 text-xs text-muted sm:flex-row">
-                <span>© 2026 Pablo Abad</span>
+                <span>{t("footer.copyright")}</span>
 
                 <div className="flex items-center gap-5">
                     <a
@@ -53,7 +54,7 @@ export default function Footer() {
 
                 <button
                     onClick={scrollToTop}
-                    aria-label="Volver arriba"
+                    aria-label={t("footer.backToTop")}
                     className="flex items-center gap-1 transition-colors hover:text-theme"
                 >
                     <ArrowUp size={14} />
