@@ -26,12 +26,12 @@ export default function Home() {
     }
   }, [darkMode]);
 
- return (
+  return (
     <>
       <Navbar t={t} lang={lang} setLang={setLang} darkMode={darkMode} setDarkMode={setDarkMode} />
       <main>
         <Hero t={t} />
-         <About t={t} />
+        <About t={t} />
         <Experience t={t} />
         <Skills t={t} />
         <Projects t={t} />
