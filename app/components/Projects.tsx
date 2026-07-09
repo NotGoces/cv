@@ -1,11 +1,4 @@
-// Objetivo: el "portfolio" dentro del portfolio.
-
-// Proyecto de inventario/gestión económica (destacado, con imagen grande si tienes capturas)
-// Tu token GCC en Solidity/BEP-20 — aquí puedes lucir el lado blockchain sin que compita con el frontend
-// Cada proyecto: imagen + título + 1 línea + stack usado (con iconos) + link a repo si es público
-
-
-"use client";
+﻿"use client";
 
 import { ExternalLink } from "lucide-react";
 import { SiGithub } from "@icons-pack/react-simple-icons";
@@ -18,93 +11,100 @@ interface Project {
     liveUrl?: string;
 }
 
-const PROJECTS: Project[] = [
-    {
-        title: "Gestión de inventario / vending",
-        description:
-            "Aplicación personal para gestionar el inventario y las operaciones de una máquina expendedora.",
-        stack: ["React", "TypeScript", "Tailwind CSS"],
-        githubUrl: "https://github.com/NotGoces",
-    },
-    {
-        title: "Nombre del proyecto",
-        description: "Breve descripción de qué hace y qué problema resuelve.",
-        stack: ["Next.js", "TypeScript"],
-        githubUrl: "https://github.com/NotGoces",
-        liveUrl: "https://tu-demo.com",
-    },
-    {
-        title: "Nombre del proyecto",
-        description: "Breve descripción de qué hace y qué problema resuelve.",
-        stack: ["React", "Solidity"],
-        githubUrl: "https://github.com/NotGoces",
-    },
-];
+const PROJECT: Project = {
+    title: "Gestión de inventario / vending",
+    description:
+        "Aplicación personal para gestionar el inventario y las operaciones de una máquina expendedora.",
+    stack: ["React", "TypeScript", "Tailwind CSS"],
+    githubUrl: "https://github.com/NotGoces",
+};
 
 export default function Projects() {
     return (
-        <section id="proyectos" className="w-full bg-theme px-6 py-24 transition-colors duration-300">
+        <section id="experience" className="w-full bg-theme px-6 py-24 transition-colors duration-300">
             <div className="mx-auto w-full max-w-5xl">
-                <h2 className="text-3xl font-semibold tracking-tight text-theme sm:text-4xl">
-                    Proyectos
-                </h2>
+                <div className="max-w-3xl">
+                    <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted/70">
+                        Experiencia y proyectos
+                    </p>
+                    <h2 className="mt-3 text-3xl font-semibold tracking-tight text-theme sm:text-4xl">
+                        Un recorrido práctico, sin complicarlo demasiado
+                    </h2>
+                    <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
+                        He trabajado en productos reales y también he construido ideas propias, siempre con el foco en resolver problemas con código claro y mantenible.
+                    </p>
+                </div>
 
-                <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    {PROJECTS.map((project) => (
-                        <div
-                            key={project.title}
-                            className="group flex flex-col overflow-hidden rounded-2xl border border-theme bg-surface transition-colors duration-300"
-                        >
-                            <div className="relative flex aspect-video w-full items-center justify-center bg-surface-muted">
-                                <span className="font-mono text-xs text-muted/60">16:9</span>
-                            </div>
+                <div className="mt-12 grid gap-6 lg:grid-cols-2">
+                    <div className="rounded-2xl border border-theme bg-surface p-6 shadow-sm">
+                        <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted/70">
+                            Experiencia
+                        </p>
+                        <h3 className="mt-3 text-xl font-semibold text-theme">
+                            Desarrollador Frontend · Cofrico
+                        </h3>
+                        <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
+                            Desarrollo de interfaces con React y JavaScript, participando en el mantenimiento y evolución de aplicaciones internas.
+                        </p>
+                        <div className="mt-4 flex flex-wrap gap-2">
+                            {['React', 'JavaScript', 'UI'].map((tech) => (
+                                <span
+                                    key={tech}
+                                    className="rounded-full border border-theme px-2.5 py-1 text-xs text-muted"
+                                >
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
 
-                            <div className="flex flex-1 flex-col p-6">
-                                <h3 className="text-lg font-medium text-theme">{project.title}</h3>
-                                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
-                                    {project.description}
-                                </p>
-
-                                <div className="mt-4 flex flex-wrap gap-2">
-                                    {project.stack.map((tech) => (
-                                        <span
-                                            key={tech}
-                                            className="rounded-full border border-theme px-2.5 py-1 text-xs text-muted"
-                                        >
-                                            {tech}
-                                        </span>
-                                    ))}
-                                </div>
-
-                                {(project.githubUrl || project.liveUrl) && (
-                                    <div className="mt-5 flex items-center gap-4 border-t border-theme pt-4">
-                                        {project.githubUrl && (
-                                            <a
-                                                href={project.githubUrl}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex items-center gap-1.5 text-xs text-muted transition-colors hover:text-theme"
-                                            >
-                                                <SiGithub size={14} color="currentColor" />
-                                                Código
-                                            </a>
-                                        )}
-                                        {project.liveUrl && (
-                                            <a
-                                                href={project.liveUrl}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex items-center gap-1.5 text-xs text-muted transition-colors hover:text-theme"
-                                            >
-                                                <ExternalLink size={14} />
-                                                Demo
-                                            </a>
-                                        )}
-                                    </div>
+                    <div className="rounded-2xl border border-theme bg-surface p-6 shadow-sm">
+                        <div className="flex items-center justify-between gap-3">
+                            <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted/70">
+                                Proyecto
+                            </p>
+                            <div className="flex items-center gap-3">
+                                <a
+                                    href={PROJECT.githubUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-muted transition-colors hover:text-theme"
+                                    aria-label="Ver código"
+                                >
+                                    <SiGithub size={16} color="currentColor" />
+                                </a>
+                                {PROJECT.liveUrl && (
+                                    <a
+                                        href={PROJECT.liveUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-muted transition-colors hover:text-theme"
+                                        aria-label="Ver demo"
+                                    >
+                                        <ExternalLink size={16} />
+                                    </a>
                                 )}
                             </div>
                         </div>
-                    ))}
+
+                        <h3 className="mt-3 text-xl font-semibold text-theme">
+                            {PROJECT.title}
+                        </h3>
+                        <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
+                            {PROJECT.description}
+                        </p>
+
+                        <div className="mt-4 flex flex-wrap gap-2">
+                            {PROJECT.stack.map((tech) => (
+                                <span
+                                    key={tech}
+                                    className="rounded-full border border-theme px-2.5 py-1 text-xs text-muted"
+                                >
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
