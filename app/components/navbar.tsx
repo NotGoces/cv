@@ -35,9 +35,6 @@ export default function Navbar({ t, lang, setLang, darkMode, setDarkMode }: Navb
           <a href="#skills" className="transition-colors hover:text-theme">
             {t("navbar.skills")}
           </a>
-          <a href="#experience" className="transition-colors hover:text-theme">
-            {t("navbar.projects")}
-          </a>
           <a href="#education" className="transition-colors hover:text-theme">
             {t("navbar.education")}
           </a>

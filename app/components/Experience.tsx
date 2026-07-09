@@ -1,73 +1,110 @@
-// Objetivo: demostrar trabajo real, con impacto.
+﻿"use client";
 
-// Tarjeta 1: Cofrico (2022-2024) — Frontend Developer. 3-4 iconos con lo que hiciste ahí (ej: ícono de componente = "desarrollo de UI", ícono de team = "trabajo en equipo")
-// Tarjeta 2: Proyecto personal (2024-2025) — app de gestión económica/inventario de máquinas expendedoras. Trátalo como mini case-study: qué problema resolvía + stack usado + captura si tienes
+import { ExternalLink } from "lucide-react";
+import { SiGithub } from "@icons-pack/react-simple-icons";
 
-"use client";
-
-interface ExperienceItem {
-    role: string;
-    company: string;
-    period: string;
-    description?: string;
-    current?: boolean;
+interface Project {
+    title: string;
+    description: string;
+    stack: string[];
+    githubUrl?: string;
+    liveUrl?: string;
 }
 
-const EXPERIENCE: ExperienceItem[] = [
-    {
-        role: "Desarrollador Frontend",
-        company: "Cofrico",
-        period: "2022 — 2024",
-        description:
-            "Desarrollo de interfaces con React y JavaScript, colaborando en el mantenimiento y evolución de aplicaciones internas.",
-    },
-];
+const PROJECT: Project = {
+    title: "Gestión de inventario / vending",
+    description:
+        "Aplicación personal para gestionar el inventario y las operaciones de una máquina expendedora.",
+    stack: ["React", "TypeScript", "Tailwind CSS"],
+    githubUrl: "https://github.com/NotGoces",
+};
 
-export default function Experience() {
-    const inset = 50 / EXPERIENCE.length;
-
+export default function Projects() {
     return (
-        <section id="experiencia" className="w-full bg-theme px-6 py-24 transition-colors duration-300">
+        <section id="experience" className="w-full bg-theme px-6 py-24 transition-colors duration-300">
             <div className="mx-auto w-full max-w-5xl">
-                <h2 className="text-3xl font-semibold tracking-tight text-theme sm:text-4xl">
-                    Experiencia
-                </h2>
+                <div className="max-w-3xl">
+                    <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted/70">
+                        Experiencia y proyectos
+                    </p>
+                    <h2 className="mt-3 text-3xl font-semibold tracking-tight text-theme sm:text-4xl">
+                        Un recorrido práctico, sin complicarlo demasiado
+                    </h2>
+                    <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
+                        He trabajado en productos reales y también he construido ideas propias, siempre con el foco en resolver problemas con código claro y mantenible.
+                    </p>
+                </div>
 
-                <div className="relative mt-16 flex flex-col gap-14 md:flex-row md:gap-8">
-                    <div className="absolute left-[7px] top-2 h-[calc(100%-1rem)] w-px bg-theme/20 md:hidden" />
+                <div className="mt-12 grid gap-6 lg:grid-cols-2">
+                    <div className="rounded-2xl border border-theme bg-surface p-6 shadow-sm">
+                        <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted/70">
+                            Experiencia
+                        </p>
+                        <h3 className="mt-3 text-xl font-semibold text-theme">
+                            Desarrollador Frontend · Cofrico
+                        </h3>
+                        <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
+                            Desarrollo de interfaces con React y JavaScript, participando en el mantenimiento y evolución de aplicaciones internas.
+                        </p>
+                        <div className="mt-4 flex flex-wrap gap-2">
+                            {['React', 'JavaScript', 'UI'].map((tech) => (
+                                <span
+                                    key={tech}
+                                    className="rounded-full border border-theme px-2.5 py-1 text-xs text-muted"
+                                >
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
 
-                    {EXPERIENCE.length > 1 && (
-                        <div
-                            className="absolute top-[7px] hidden h-px bg-theme/20 md:block"
-                            style={{ left: `${inset}%`, right: `${inset}%` }}
-                        />
-                    )}
-
-                    {EXPERIENCE.map((item) => (
-                        <div
-                            key={`${item.role}-${item.company}`}
-                            className="relative flex flex-1 gap-8 pl-8 md:flex-col md:items-start md:gap-0 md:pl-0 md:pt-8"
-                        >
-                            <span
-                                className={`absolute left-0 top-2 h-[15px] w-[15px] rounded-full border-2 md:left-1/2 md:top-0 md:-translate-x-1/2 ${
-                                    item.current
-                                        ? "border-theme bg-theme"
-                                        : "border-theme bg-surface"
-                                }`}
-                            />
-
-                            <div className="flex flex-1 flex-col md:items-center md:text-center">
-                                <span className="font-mono text-xs text-muted/60">{item.period}</span>
-                                <h3 className="mt-1.5 text-xl font-medium text-theme">{item.role}</h3>
-                                <span className="mt-0.5 text-sm text-muted">{item.company}</span>
-                                {item.description && (
-                                    <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted sm:text-base md:max-w-[260px]">
-                                        {item.description}
-                                    </p>
+                    <div className="rounded-2xl border border-theme bg-surface p-6 shadow-sm">
+                        <div className="flex items-center justify-between gap-3">
+                            <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted/70">
+                                Proyecto
+                            </p>
+                            <div className="flex items-center gap-3">
+                                <a
+                                    href={PROJECT.githubUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-muted transition-colors hover:text-theme"
+                                    aria-label="Ver código"
+                                >
+                                    <SiGithub size={16} color="currentColor" />
+                                </a>
+                                {PROJECT.liveUrl && (
+                                    <a
+                                        href={PROJECT.liveUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-muted transition-colors hover:text-theme"
+                                        aria-label="Ver demo"
+                                    >
+                                        <ExternalLink size={16} />
+                                    </a>
                                 )}
                             </div>
                         </div>
-                    ))}
+
+                        <h3 className="mt-3 text-xl font-semibold text-theme">
+                            {PROJECT.title}
+                        </h3>
+                        <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
+                            {PROJECT.description}
+                        </p>
+
+                        <div className="mt-4 flex flex-wrap gap-2">
+                            {PROJECT.stack.map((tech) => (
+                                <span
+                                    key={tech}
+                                    className="rounded-full border border-theme px-2.5 py-1 text-xs text-muted"
+                                >
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
