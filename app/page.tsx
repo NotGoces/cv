@@ -30,13 +30,13 @@ export default function Home() {
     <>
       <Navbar t={t} lang={lang} setLang={setLang} darkMode={darkMode} setDarkMode={setDarkMode} />
       <main>
-        {/* <Hero t={t} />
-        <About t={t} />
+        <Hero t={t} />
+         <About t={t} />
         <Experience t={t} />
         <Skills t={t} />
         <Projects t={t} />
         <Education t={t} />
-        <Contact t={t} /> */}
+        <Contact t={t} />
       </main>
       <Footer t={t} />
     </>
