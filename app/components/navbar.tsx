@@ -1,5 +1,5 @@
 import { Lang, TranslationFn } from "../constants/translations";
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, FileDownIcon } from "lucide-react";
 
 interface NavbarProps {
   t: TranslationFn;
@@ -55,10 +55,11 @@ export default function Navbar({ t, lang, setLang, darkMode, setDarkMode }: Navb
             <a
               href="/CV_Pablo_Abad.pdf"
               download="CV_Pablo_Abad.pdf"
-              className="transition-colors hover:text-theme"
+              className="transition-colors hover:text-theme flex items-center justify-center"
               title={t("navbar.downloadCV")}
+              aria-label={t("navbar.downloadCV")}
             >
-              {t("navbar.downloadCV")}
+              <FileDownIcon size={14} />
             </a>
           </div>
         </div>
