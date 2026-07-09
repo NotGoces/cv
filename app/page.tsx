@@ -13,7 +13,14 @@ import Footer from "./components/footer";
 import { Lang, createT } from "./constants/translations";
 
 export default function Home() {
-  const [lang, setLang] = useState<Lang>("es");
+  const [lang, setLang] = useState<Lang>(() => {
+    if (typeof window === "undefined") {
+      return "es";
+    }
+
+    const savedLang = window.localStorage.getItem("lang") as Lang | null;
+    return savedLang === "es" || savedLang === "en" ? savedLang : "es";
+  });
   const [darkMode, setDarkMode] = useState<boolean>(() => {
     if (typeof window === "undefined") {
       return true;
@@ -35,6 +42,10 @@ export default function Home() {
     document.documentElement.setAttribute("data-theme", darkMode ? "dark" : "light");
     window.localStorage.setItem("theme", darkMode ? "dark" : "light");
   }, [darkMode]);
+
+  useEffect(() => {
+    window.localStorage.setItem("lang", lang);
+  }, [lang]);
 
   return (
     <>
