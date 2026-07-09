@@ -9,37 +9,22 @@
 
 export default function About() {
     return (
-        <section
-            id="about"
-            className="w-full bg-white px-6 py-24 transition-colors duration-300 dark:bg-[#161617]"
-        >
+        <section id="about" className="w-full bg-theme px-6 py-24 transition-colors duration-300">
             <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-12 md:flex-row md:items-center md:gap-16">
-                {/* Foto 1:1 */}
                 <div className="w-full max-w-xs shrink-0 md:max-w-sm">
-                    <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-[#1d1d1f]/10 bg-[#1d1d1f]/[0.03] dark:border-[#f5f5f7]/10 dark:bg-[#f5f5f7]/[0.05]">
-                        {/*
-                            👉 Cuando tengas la foto, sustituye este bloque por:
-                            <img
-                                src="/profile.jpg"
-                                alt="Pablo Abad Goldsmith"
-                                className="h-full w-full object-cover"
-                            />
-                        */}
+                    <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-theme bg-surface-muted">
                         <div className="flex h-full w-full items-center justify-center">
-                            <span className="font-mono text-xs text-[#1d1d1f]/30 dark:text-[#f5f5f7]/30">
-                                1:1
-                            </span>
+                            <span className="font-mono text-xs text-muted/60">1:1</span>
                         </div>
                     </div>
                 </div>
 
-                {/* Texto */}
                 <div className="flex flex-1 flex-col items-start">
-                    <h2 className="text-3xl font-semibold tracking-tight text-[#1d1d1f] sm:text-4xl dark:text-[#f5f5f7]">
+                    <h2 className="text-3xl font-semibold tracking-tight text-theme sm:text-4xl">
                         Sobre mí
                     </h2>
 
-                    <div className="mt-6 space-y-4 text-base leading-relaxed text-[#1d1d1f]/70 sm:text-lg dark:text-[#f5f5f7]/70">
+                    <div className="mt-6 space-y-4 text-base leading-relaxed text-muted sm:text-lg">
                         <p>
                             Soy desarrollador frontend con cerca de dos años de
                             experiencia profesional, especializado en construir

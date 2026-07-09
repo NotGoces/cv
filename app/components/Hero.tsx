@@ -2,15 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 
-// 👉 Cambia estos roles por los tuyos reales — se escriben en bucle en el prompt.
-const ROLES = [
-    "Frontend Developer",
-    "React + Typescript + Tailwind",
-];
+const ROLES = ["Frontend Developer", "React + Typescript + Tailwind"];
 
-const TYPE_SPEED = 50; // ms por caracter al escribir
-const DELETE_SPEED = 40; // ms por caracter al borrar
-const HOLD_TIME = 1800; // ms que se queda la frase completa antes de borrarse
+const TYPE_SPEED = 50;
+const DELETE_SPEED = 40;
+const HOLD_TIME = 1800;
 
 function useTypewriter(words: string[]) {
     const [text, setText] = useState("");
@@ -19,9 +15,7 @@ function useTypewriter(words: string[]) {
     const prefersReducedMotion = useRef(false);
 
     useEffect(() => {
-        prefersReducedMotion.current = window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-        ).matches;
+        prefersReducedMotion.current = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         if (prefersReducedMotion.current) {
             setText(words[0]);
         }
@@ -35,10 +29,7 @@ function useTypewriter(words: string[]) {
 
         if (phase === "typing") {
             if (text.length < current.length) {
-                timeout = setTimeout(
-                    () => setText(current.slice(0, text.length + 1)),
-                    TYPE_SPEED
-                );
+                timeout = setTimeout(() => setText(current.slice(0, text.length + 1)), TYPE_SPEED);
             } else {
                 timeout = setTimeout(() => setPhase("holding"), HOLD_TIME);
             }
@@ -46,13 +37,12 @@ function useTypewriter(words: string[]) {
             timeout = setTimeout(() => setPhase("deleting"), HOLD_TIME);
         } else {
             if (text.length > 0) {
-                timeout = setTimeout(
-                    () => setText(current.slice(0, text.length - 1)),
-                    DELETE_SPEED
-                );
+                timeout = setTimeout(() => setText(current.slice(0, text.length - 1)), DELETE_SPEED);
             } else {
-                setWordIndex((i) => (i + 1) % words.length);
-                setPhase("typing");
+                timeout = setTimeout(() => {
+                    setWordIndex((i) => (i + 1) % words.length);
+                    setPhase("typing");
+                }, 0);
             }
         }
 
@@ -66,20 +56,18 @@ export default function Hero() {
     const typed = useTypewriter(ROLES);
 
     return (
-        <section className="relative flex min-h-[92vh] w-full flex-col items-center justify-center bg-white px-6 transition-colors duration-300 dark:bg-[#161617]">
+        <section className="relative flex min-h-[92vh] w-full flex-col items-center justify-center bg-theme px-6 transition-colors duration-300">
             <div className="mx-auto flex w-full max-w-5xl flex-col items-start">
-                {/* Nombre */}
-                <h1 className="text-5xl font-semibold tracking-tight text-[#1d1d1f] sm:text-7xl dark:text-[#f5f5f7]">
+                <h1 className="text-5xl font-semibold tracking-tight text-theme sm:text-7xl">
                     Pablo Abad Goldsmith
                 </h1>
 
-                {/* Prompt con typing effect */}
-                <div className="mt-5 flex items-center font-mono text-lg text-[#1d1d1f]/70 sm:text-2xl dark:text-[#f5f5f7]/70">
-                    <span className="mr-2 text-[#1d1d1f]/30 dark:text-[#f5f5f7]/30">&gt;</span>
+                <div className="mt-5 flex items-center font-mono text-lg text-muted sm:text-2xl">
+                    <span className="mr-2 text-muted/60">&gt;</span>
                     <span>{typed}</span>
                     <span
                         aria-hidden="true"
-                        className="ml-1 inline-block h-[1.1em] w-[2px] animate-[blink_1s_steps(1)_infinite] bg-[#1d1d1f]/70 dark:bg-[#f5f5f7]/70"
+                        className="ml-1 inline-block h-[1.1em] w-[2px] animate-[blink_1s_steps(1)_infinite] bg-muted"
                     />
                 </div>
             </div>

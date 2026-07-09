@@ -14,31 +14,41 @@ import { Lang, createT } from "./constants/translations";
 
 export default function Home() {
   const [lang, setLang] = useState<Lang>("es");
-  const [darkMode, setDarkMode] = useState<boolean>(true);
+  const [darkMode, setDarkMode] = useState<boolean>(() => {
+    if (typeof window === "undefined") {
+      return true;
+    }
+
+    const savedTheme = window.localStorage.getItem("theme");
+    if (savedTheme === "light" || savedTheme === "dark") {
+      return savedTheme === "dark";
+    }
+
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
 
   const t = createT(lang);
 
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    document.documentElement.classList.toggle("dark", darkMode);
+    document.documentElement.style.colorScheme = darkMode ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", darkMode ? "dark" : "light");
+    window.localStorage.setItem("theme", darkMode ? "dark" : "light");
   }, [darkMode]);
 
   return (
     <>
       <Navbar t={t} lang={lang} setLang={setLang} darkMode={darkMode} setDarkMode={setDarkMode} />
       <main>
-        <Hero t={t} />
-        <About t={t} />
-        <Experience t={t} />
-        <Skills t={t} />
-        <Projects t={t} />
-        <Education t={t} />
-        <Contact t={t} />
+        <Hero />
+        <About />
+        <Experience />
+        <Skills />
+        <Projects />
+        <Education />
+        <Contact />
       </main>
-      <Footer t={t} />
+      <Footer />
     </>
   );
 }

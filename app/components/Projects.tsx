@@ -18,8 +18,6 @@ interface Project {
     liveUrl?: string;
 }
 
-// 👉 Edita/añade tus proyectos reales. Deja githubUrl o liveUrl vacíos
-// (undefined) si no aplica y ese enlace no se mostrará.
 const PROJECTS: Project[] = [
     {
         title: "Gestión de inventario / vending",
@@ -45,12 +43,9 @@ const PROJECTS: Project[] = [
 
 export default function Projects() {
     return (
-        <section
-            id="proyectos"
-            className="w-full bg-white px-6 py-24 transition-colors duration-300 dark:bg-[#161617]"
-        >
+        <section id="proyectos" className="w-full bg-theme px-6 py-24 transition-colors duration-300">
             <div className="mx-auto w-full max-w-5xl">
-                <h2 className="text-3xl font-semibold tracking-tight text-[#1d1d1f] sm:text-4xl dark:text-[#f5f5f7]">
+                <h2 className="text-3xl font-semibold tracking-tight text-theme sm:text-4xl">
                     Proyectos
                 </h2>
 
@@ -58,53 +53,37 @@ export default function Projects() {
                     {PROJECTS.map((project) => (
                         <div
                             key={project.title}
-                            className="group flex flex-col overflow-hidden rounded-2xl border border-[#1d1d1f]/10 bg-white transition-colors duration-300 hover:border-[#1d1d1f]/20 dark:border-[#f5f5f7]/10 dark:bg-[#1d1d1f] dark:hover:border-[#f5f5f7]/20"
+                            className="group flex flex-col overflow-hidden rounded-2xl border border-theme bg-surface transition-colors duration-300"
                         >
-                            {/* Imagen / captura */}
-                            <div className="relative flex aspect-video w-full items-center justify-center bg-[#1d1d1f]/[0.03] dark:bg-[#f5f5f7]/[0.05]">
-                                {/*
-                                    👉 Cuando tengas una captura, sustituye este bloque por:
-                                    <img
-                                        src="/projects/tu-proyecto.png"
-                                        alt={project.title}
-                                        className="h-full w-full object-cover"
-                                    />
-                                */}
-                                <span className="font-mono text-xs text-[#1d1d1f]/30 dark:text-[#f5f5f7]/30">
-                                    16:9
-                                </span>
+                            <div className="relative flex aspect-video w-full items-center justify-center bg-surface-muted">
+                                <span className="font-mono text-xs text-muted/60">16:9</span>
                             </div>
 
-                            {/* Contenido */}
                             <div className="flex flex-1 flex-col p-6">
-                                <h3 className="text-lg font-medium text-[#1d1d1f] dark:text-[#f5f5f7]">
-                                    {project.title}
-                                </h3>
-                                <p className="mt-2 flex-1 text-sm leading-relaxed text-[#1d1d1f]/60 dark:text-[#f5f5f7]/60">
+                                <h3 className="text-lg font-medium text-theme">{project.title}</h3>
+                                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
                                     {project.description}
                                 </p>
 
-                                {/* Tags */}
                                 <div className="mt-4 flex flex-wrap gap-2">
                                     {project.stack.map((tech) => (
                                         <span
                                             key={tech}
-                                            className="rounded-full border border-[#1d1d1f]/10 px-2.5 py-1 text-xs text-[#1d1d1f]/60 dark:border-[#f5f5f7]/10 dark:text-[#f5f5f7]/60"
+                                            className="rounded-full border border-theme px-2.5 py-1 text-xs text-muted"
                                         >
                                             {tech}
                                         </span>
                                     ))}
                                 </div>
 
-                                {/* Enlaces */}
                                 {(project.githubUrl || project.liveUrl) && (
-                                    <div className="mt-5 flex items-center gap-4 border-t border-[#1d1d1f]/10 pt-4 dark:border-[#f5f5f7]/10">
+                                    <div className="mt-5 flex items-center gap-4 border-t border-theme pt-4">
                                         {project.githubUrl && (
                                             <a
                                                 href={project.githubUrl}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center gap-1.5 text-xs text-[#1d1d1f]/70 transition-colors hover:text-[#1d1d1f] dark:text-[#f5f5f7]/70 dark:hover:text-[#f5f5f7]"
+                                                className="flex items-center gap-1.5 text-xs text-muted transition-colors hover:text-theme"
                                             >
                                                 <SiGithub size={14} color="currentColor" />
                                                 Código
@@ -115,7 +94,7 @@ export default function Projects() {
                                                 href={project.liveUrl}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center gap-1.5 text-xs text-[#1d1d1f]/70 transition-colors hover:text-[#1d1d1f] dark:text-[#f5f5f7]/70 dark:hover:text-[#f5f5f7]"
+                                                className="flex items-center gap-1.5 text-xs text-muted transition-colors hover:text-theme"
                                             >
                                                 <ExternalLink size={14} />
                                                 Demo

@@ -1,8 +1,8 @@
-import { Lang } from "../constants/translations";
+import { Lang, TranslationKeys } from "../constants/translations";
 import { Sun, Moon } from "lucide-react";
 
 interface NavbarProps {
-  t: (key: any) => string;
+  t: (key: TranslationKeys) => string;
   lang: Lang;
   setLang: (lang: Lang) => void;
   darkMode: boolean;
@@ -11,51 +11,49 @@ interface NavbarProps {
 
 export default function Navbar({ t, lang, setLang, darkMode, setDarkMode }: NavbarProps) {
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-[#1d1d1f]/10 dark:border-[#f5f5f7]/10 bg-white/70 dark:bg-[#161617]/70 backdrop-blur-md transition-colors duration-300">
-      <div className="mx-auto flex h-12 max-w-5xl items-center justify-between px-6 text-xs font-normal tracking-tight text-[#1d1d1f]/80 dark:text-[#f5f5f7]/80">
-        {/* ICONO NOMBRE */}
+    <nav className="sticky top-0 z-50 w-full border-b border-theme bg-surface/70 backdrop-blur-md transition-colors duration-300">
+      <div className="mx-auto flex h-12 max-w-5xl items-center justify-between px-6 text-xs font-normal tracking-tight text-muted">
         <div className="flex items-center gap-6 sm:gap-8">
-          <a href="#"
+          <a
+            href="#"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className="..."
+            className="text-theme transition-colors hover:text-muted"
           >
             PAG
           </a>
         </div>
-        {/* ENLACES DE NAVEGACIÓN */}
         <div className="flex items-center gap-6 sm:gap-8">
-          <a href="#about" className="">
+          <a href="#about" className="transition-colors hover:text-theme">
             {t("navbar.about")}
           </a>
-          <a href="#experience" className="">
+          <a href="#experience" className="transition-colors hover:text-theme">
             {t("navbar.experience")}
           </a>
-          <a href="#skills" className="">
+          <a href="#skills" className="transition-colors hover:text-theme">
             {t("navbar.skills")}
           </a>
-          <a href="#projects" className="">
+          <a href="#projects" className="transition-colors hover:text-theme">
             {t("navbar.projects")}
           </a>
-          <a href="#education" className="">
+          <a href="#education" className="transition-colors hover:text-theme">
             {t("navbar.education")}
           </a>
-          <a href="#contact" className="">
+          <a href="#contact" className="transition-colors hover:text-theme">
             {t("navbar.contact")}
           </a>
-          {/* BOTONES DE IDIOMA Y TEMA Y DESCARGA */}
-          <div className="">
+          <div className="flex items-center gap-3">
             <button
               onClick={() => setLang(lang === "es" ? "en" : "es")}
-              className=""
+              className="transition-colors hover:text-theme"
             >
               {lang === "es" ? "en" : "es"}
             </button>
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className=""
+              className="transition-colors hover:text-theme"
               title={darkMode ? t("navbar.lightMode") : t("navbar.darkMode")}
               aria-label="Toggle theme"
             >
@@ -64,7 +62,7 @@ export default function Navbar({ t, lang, setLang, darkMode, setDarkMode }: Navb
             <a
               href="/CV_Pablo_Abad.pdf"
               download="CV_Pablo_Abad.pdf"
-              className=""
+              className="transition-colors hover:text-theme"
               title={t("navbar.downloadCV")}
             >
               {t("navbar.downloadCV")}
