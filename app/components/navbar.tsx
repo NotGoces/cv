@@ -1,8 +1,8 @@
-import { Lang, TranslationKeys } from "../constants/translations";
+import { Lang, TranslationFn } from "../constants/translations";
 import { Sun, Moon } from "lucide-react";
 
 interface NavbarProps {
-  t: (key: TranslationKeys) => string;
+  t: TranslationFn;
   lang: Lang;
   setLang: (lang: Lang) => void;
   darkMode: boolean;
