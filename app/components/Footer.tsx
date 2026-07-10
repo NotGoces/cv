@@ -2,7 +2,8 @@
 
 import { ArrowUp } from "lucide-react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { SiGmail, SiWhatsapp } from "@icons-pack/react-simple-icons";
+import { SiWhatsapp } from "@icons-pack/react-simple-icons";
+import { Mail } from "lucide-react";
 import type { TranslationFn } from "../constants/translations";
 
 const scrollToTop = () => {
@@ -39,7 +40,7 @@ export default function Footer({ t }: { t: TranslationFn }) {
                         aria-label="Email"
                         className="transition-colors hover:text-theme"
                     >
-                        <SiGmail size={16} />
+                        <Mail size={16} />
                     </a>
                     <a
                         href="https://wa.me/34681677511"
