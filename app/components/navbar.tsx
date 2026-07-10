@@ -25,6 +25,7 @@ export default function Navbar({ t, lang, setLang, darkMode, setDarkMode }: Navb
           </a>
         </div>
         <div className="flex items-center gap-6 sm:gap-8">
+          <div className="hidden sm:flex items-center gap-6 sm:gap-8">
           {["about", "experience", "skills", "education", "contact"].map((section) => (
             <a
               key={section}
@@ -34,6 +35,7 @@ export default function Navbar({ t, lang, setLang, darkMode, setDarkMode }: Navb
               {t(`navbar.${section}`)}
             </a>
           ))}
+          </div>
           <div className="flex items-center gap-3">
             <button
               onClick={() => setLang(lang === "es" ? "en" : "es")}
