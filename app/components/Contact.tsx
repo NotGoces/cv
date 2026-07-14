@@ -68,7 +68,7 @@ export default function Contact({ t }: { t: TranslationFn }) {
                             GitHub
                         </a>
                         <a
-                            href="https://wa.me/34XXXXXXXXX"
+                            href="https://wa.me/34681677511"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label={t("contact.whatsappLink")}
