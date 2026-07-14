@@ -56,7 +56,7 @@ export default function Hero({ t }: { t: TranslationFn }) {
     const typed = useTypewriter(roles);
 
     return (
-        <section className="relative flex min-h-[92vh] w-full flex-col items-center justify-center bg-theme px-6 transition-colors duration-300">
+        <section className="relative flex min-h-[40vh] w-full flex-col items-center justify-center bg-theme px-6 transition-colors duration-300">
             <div className="mx-auto flex w-full max-w-5xl flex-col items-start">
                 <h1 className="text-5xl font-semibold tracking-tight text-theme sm:text-7xl">
                     {t("hero.name")}

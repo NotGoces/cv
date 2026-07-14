@@ -22,7 +22,7 @@ export default function Education({ t }: { t: TranslationFn }) {
     const education: EducationItem[] = [
         {
             title: t("education.specializationTitle"),
-            period: "2025 - 2026",
+            period: t("education.specializationPeriod"),
             description: t("education.specializationDescription"),
             institution: t("education.specializationInstitution"),
             current: true,
@@ -45,11 +45,11 @@ export default function Education({ t }: { t: TranslationFn }) {
     ];
 
     const shortCourses: ShortCourseItem[] = [
-        { title: t("education.shortCourse1Title"), platform: t("education.shortCourse1Platform"), year: "2016 - 2019" },
-        { title: t("education.shortCourse2Title"), platform: t("education.shortCourse2Platform"), year: "2012 - 2016" },
-        { title: t("education.shortCourse3Title"), platform: t("education.shortCourse3Platform"), year: "2024" },
-        { title: t("education.shortCourse4Title"), platform: t("education.shortCourse4Platform"), year: "2023" },
-        { title: t("education.shortCourse5Title"), platform: t("education.shortCourse5Platform"), year: "2023" },
+        { title: t("education.iaCourseTitle"), platform: t("education.iaCoursePlatform"), year: "2026" },
+        { title: t("education.codeMonsterTitle"), platform: t("education.codeMonsterPlatform"), year: "2016 - 2019" },
+        { title: t("education.marketingCourseTitle"), platform: t("education.marketingCoursePlatform"), year: "2018" },
+        { title: t("education.ecommerceCourseTitle"), platform: t("education.ecommerceCoursePlatform"), year: "2018" },
+        { title: t("education.conservatoryTitle"), platform: t("education.conservatoryPlatform"), year: "2012 - 2016" },
     ];
 
     return (
