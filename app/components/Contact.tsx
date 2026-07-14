@@ -125,7 +125,9 @@ export default function Contact({ t }: { t: TranslationFn }) {
 
                     <button
                         type="submit"
-                        className="mt-2 self-start rounded-full bg-theme px-6 py-3 text-sm font-medium text-theme transition-colors"
+                        className="mt-2 self-start rounded-full px-6 py-3 text-sm font-medium transition-all duration-200 
+                        bg-blue-600 text-white hover:bg-blue-700 active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
+                        dark:bg-blue-500 dark:hover:bg-blue-400 dark:focus:ring-offset-slate-900"
                     >
                         {t("contact.submit")}
                     </button>
