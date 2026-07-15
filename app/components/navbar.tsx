@@ -54,8 +54,8 @@ export default function Navbar({ t, lang, setLang, darkMode, setDarkMode }: Navb
               {darkMode ? <Sun size={14} /> : <Moon size={14} />}
             </button>
             <a
-              href="/CV_Pablo_Abad.pdf"
-              download="CV_Pablo_Abad.pdf"
+              href="/projects/Cv_PabloAbad.pdf"
+              download="Cv_PabloAbad.pdf"
               className="transition-colors hover:text-theme flex items-center justify-center"
               title={t("navbar.downloadCV")}
               aria-label={t("navbar.downloadCV")}
