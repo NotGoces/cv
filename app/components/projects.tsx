@@ -18,7 +18,7 @@ const getCards = (t: TranslationFn): CardItem[] => [
         label: t("projects.experienceLabel"),
         title: t("projects.experienceTitle"),
         description: t("projects.experienceDescription"),
-        stack: ["React", "TypeScript", "UI", "Tailwind CSS", "HTML"],
+        stack: ["React", "JavaScript", "Tailwind CSS", "HTML"],
         githubUrl: "https://github.com/pabadcofrico",
     },
     {
