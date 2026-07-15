@@ -10,7 +10,6 @@ interface CardItem {
     description: string;
     stack: string[];
     githubUrl?: string;
-    liveUrl?: string;
     bscScanUrl?: string;
 }
 
@@ -75,7 +74,7 @@ export default function Projects({ t }: { t: TranslationFn }) {
                                         {item.label}
                                     </p>
 
-                                    {/* Iconos de enlaces */}
+                                    {/* Iconos de enlaces con condicionales independientes */}
                                     <div className="flex items-center gap-3">
                                         {item.githubUrl && (
                                             <a
@@ -84,17 +83,19 @@ export default function Projects({ t }: { t: TranslationFn }) {
                                                 rel="noopener noreferrer"
                                                 className="text-muted transition-colors hover:text-theme"
                                                 aria-label={t("projects.codeLink")}
+                                                title={t("projects.codeLink")}
                                             >
                                                 <SiGithub size={16} color="currentColor" />
                                             </a>
                                         )}
-                                        {(item.liveUrl || item.bscScanUrl) && (
+                                        {item.bscScanUrl && (
                                             <a
-                                                href={item.liveUrl || item.bscScanUrl}
+                                                href={item.bscScanUrl}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="text-muted transition-colors hover:text-theme"
-                                                aria-label={item.bscScanUrl ? "BscScan" : t("projects.demoLink")}
+                                                aria-label={t("projects.bscScanLink")}
+                                                title={t("projects.bscScanLink")}
                                             >
                                                 <ExternalLink size={16} />
                                             </a>
