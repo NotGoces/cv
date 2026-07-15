@@ -22,8 +22,9 @@ import {
 } from "@icons-pack/react-simple-icons";
 import { TbBrandAdobePremiere, TbBrandAdobePhotoshop } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
-import { FaFileWord, FaFileExcel, FaJava } from "react-icons/fa6";
+import { FaFileWord, FaFileExcel, FaJava, FaCar, FaMotorcycle } from "react-icons/fa6";
 import { BrainCircuit } from "lucide-react";
+import { ES, GB, FR } from "country-flag-icons/react/3x2";
 import type { ComponentType } from "react";
 import type { TranslationFn } from "../constants/translations";
 
@@ -33,7 +34,27 @@ interface Skill {
     brandColor?: string;
 }
 
+// Wrapper para forzar a las banderas a ser un cuadrado perfecto de 30x30px
+const FlagWrapper = (FlagComponent: ComponentType<{ className?: string }>) => {
+    return function FlagIcon({ size = 30 }: { size?: number }) {
+        return (
+            <div 
+                className="overflow-hidden rounded-full border border-neutral-200 dark:border-neutral-800"
+                style={{ width: `${size}px`, height: `${size}px` }}
+            >
+                <FlagComponent className="h-full w-full object-cover" />
+            </div>
+        );
+    };
+};
+
 const getSkills = (t: TranslationFn): Skill[] => [
+    { name: t("skills.spanish"), icon: FlagWrapper(ES) }, 
+    { name: t("skills.english"), icon: FlagWrapper(GB) }, 
+    { name: t("skills.french"), icon: FlagWrapper(FR) }, 
+    { name: t("skills.drivingLicenseB"), icon: FaCar },
+    { name: t("skills.drivingLicenseA2"), icon: FaMotorcycle },
+
     { name: "React", icon: SiReact, brandColor: "#61DAFB" },
     { name: "Next.js", icon: SiNextdotjs },
     { name: "TypeScript", icon: SiTypescript, brandColor: "#3178C6" },
@@ -63,7 +84,6 @@ const getSkills = (t: TranslationFn): Skill[] => [
     { name: "Jira", icon: SiJira, brandColor: "#0052CC" },
     { name: "Excel", icon: FaFileExcel, brandColor: "#217346" },
     { name: "Word", icon: FaFileWord, brandColor: "#2B579A" },
-
 ];
 
 export default function Skills({ t }: { t: TranslationFn }) {
@@ -82,11 +102,13 @@ export default function Skills({ t }: { t: TranslationFn }) {
                             key={name}
                             className="group flex flex-col items-center justify-center gap-3 rounded-2xl border border-theme bg-surface-muted px-4 py-7 transition-all duration-300 hover:-translate-y-1 hover:border-theme"
                         >
-                            <Icon
-                                size={30}
-                                color={brandColor ?? "currentColor"}
-                                className="text-muted"
-                            />
+                            <div className="flex h-[30px] w-[30px] items-center justify-center">
+                                <Icon
+                                    size={30}
+                                    color={brandColor ?? "currentColor"}
+                                    className="text-muted"
+                                />
+                            </div>
                             <span className="text-center text-xs font-medium text-muted">
                                 {name}
                             </span>

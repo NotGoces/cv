@@ -32,6 +32,11 @@ es: {
     "skills.imageEditing": "Edición de Imagen (PS/AI)",
     "skills.videoEditing": "Edición de Video (Pr/AE)",
     "skills.audioProduction": "Producción de Audio (DAW)",
+    "skills.spanish": "Español Nativo",
+    "skills.english": "Inglés Avanzado",
+    "skills.french": "Francés Básico",
+    "skills.drivingLicenseB": "Carnet B (coche propio)",
+    "skills.drivingLicenseA2": "Carnet A2 (moto propia)",
     // projects
     "projects.sectionLabel": "Experiencia y proyectos",
     "projects.title": "Un recorrido práctico, sin complicarlo demasiado",
@@ -123,6 +128,11 @@ es: {
     "skills.imageEditing": "Image Editing (PS/AI)",
     "skills.videoEditing": "Video Editing (Pr/AE)",
     "skills.audioProduction": "Audio Production (DAW)",
+    "skills.spanish": "Native Spanish",
+    "skills.english": "Advanced English",
+    "skills.french": "Basic French",
+    "skills.drivingLicenseB": "Driving License B (own car)",
+    "skills.drivingLicenseA2": "Driving License A2 (own bike)",
     // projects
     "projects.sectionLabel": "Experience and projects",
     "projects.title": "A practical path, without overcomplicating it",
