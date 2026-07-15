@@ -74,7 +74,6 @@ export default function Projects({ t }: { t: TranslationFn }) {
                                         {item.label}
                                     </p>
 
-                                    {/* Iconos de enlaces con condicionales independientes */}
                                     <div className="flex items-center gap-3">
                                         {item.githubUrl && (
                                             <a
@@ -82,8 +81,6 @@ export default function Projects({ t }: { t: TranslationFn }) {
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="text-muted transition-colors hover:text-theme"
-                                                aria-label={t("projects.codeLink")}
-                                                title={t("projects.codeLink")}
                                             >
                                                 <SiGithub size={16} color="currentColor" />
                                             </a>
