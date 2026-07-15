@@ -17,8 +17,8 @@ es: {
     // hero
     "hero.name": "Pablo Abad Goldsmith",
     "hero.roleFrontend": "Desarrollador Frontend",
-    "hero.roleStack": "React + TypeScript + Tailwind",
-    "hero.iaBigData": "IA y Big Data",
+    "hero.roleStack": "Frontend con React + TypeScript + Tailwind",
+    "hero.iaBigData": "Especializado en IA y Big Data",
     //about
     "about.imageAlt": "Pablo Abad",
     "about.title": "Sobre mí",
@@ -113,8 +113,8 @@ es: {
     // hero
     "hero.name": "Pablo Abad Goldsmith",
     "hero.roleFrontend": "Frontend Developer",
-    "hero.roleStack": "React + TypeScript + Tailwind",
-    "hero.iaBigData": "IA y Big Data",
+    "hero.roleStack": "Frontend con React + TypeScript + Tailwind",
+    "hero.iaBigData": "Specialized in AI and Big Data",
     //about
     "about.imageAlt": "Pablo Abad",
     "about.title": "About me",
