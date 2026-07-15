@@ -5,7 +5,6 @@ import { SiGithub } from "@icons-pack/react-simple-icons";
 import type { TranslationFn } from "../constants/translations";
 
 interface CardItem {
-    type: "experience" | "project";
     label: string;
     title: string;
     description: string;
@@ -17,14 +16,13 @@ interface CardItem {
 
 const getCards = (t: TranslationFn): CardItem[] => [
     {
-        type: "experience",
         label: t("projects.experienceLabel"),
         title: t("projects.experienceTitle"),
         description: t("projects.experienceDescription"),
-        stack: ["React", "TypeScript", "UI", "Tailwind CSS"],
+        stack: ["React", "TypeScript", "UI", "Tailwind CSS", "HTML"],
+        githubUrl: "https://github.com/pabadcofrico",
     },
     {
-        type: "project",
         label: t("projects.projectLabel"),
         title: t("projects.projectTitle"),
         description: t("projects.projectDescription"),
@@ -32,19 +30,17 @@ const getCards = (t: TranslationFn): CardItem[] => [
         githubUrl: "https://github.com/NotGoces/Maquinas",
     },
     {
-        type: "project",
         label: t("projects.blockchainLabel"),
-        title: t("projects.tokenTitle"), 
+        title: t("projects.tokenTitle"),
         description: t("projects.tokenDescription"),
         stack: ["Solidity", t("projects.smartContracts"), "BSC", "BEP-20"],
         bscScanUrl: "https://bscscan.com/token/0x9d6cF9CD0a28fbbC954C253AF6d870E6407909c3",
     },
     {
-        type: "project",
         label: t("projects.cvProjectLabel"),
         title: t("projects.cvProjectTitle"),
         description: t("projects.cvProjectDescription"),
-        stack: ["TypeScript", "Tailwind CSS", "React", t("projects.deployment")],
+        stack: ["TypeScript", "React", "Tailwind CSS", t("projects.deployment"), t("projects.responsive")],
         githubUrl: "https://github.com/NotGoces/cv",
     }
 ];
@@ -69,8 +65,8 @@ export default function Projects({ t }: { t: TranslationFn }) {
 
                 <div className="mt-12 grid gap-6 sm:grid-cols-1 lg:grid-cols-2 items-stretch">
                     {cards.map((item, idx) => (
-                        <div 
-                            key={idx} 
+                        <div
+                            key={idx}
                             className="rounded-2xl border border-theme bg-surface p-6 shadow-sm flex flex-col justify-between"
                         >
                             <div>
@@ -78,33 +74,32 @@ export default function Projects({ t }: { t: TranslationFn }) {
                                     <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted/70">
                                         {item.label}
                                     </p>
-                                    
-                                    {item.type === "project" && (
-                                        <div className="flex items-center gap-3">
-                                            {item.githubUrl && (
-                                                <a
-                                                    href={item.githubUrl}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="text-muted transition-colors hover:text-theme"
-                                                    aria-label={t("projects.codeLink")}
-                                                >
-                                                    <SiGithub size={16} color="currentColor" />
-                                                </a>
-                                            )}
-                                            {(item.liveUrl || item.bscScanUrl) && (
-                                                <a
-                                                    href={item.liveUrl || item.bscScanUrl}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="text-muted transition-colors hover:text-theme"
-                                                    aria-label={item.bscScanUrl ? "BscScan" : t("projects.demoLink")}
-                                                >
-                                                    <ExternalLink size={16} />
-                                                </a>
-                                            )}
-                                        </div>
-                                    )}
+
+                                    {/* Iconos de enlaces */}
+                                    <div className="flex items-center gap-3">
+                                        {item.githubUrl && (
+                                            <a
+                                                href={item.githubUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-muted transition-colors hover:text-theme"
+                                                aria-label={t("projects.codeLink")}
+                                            >
+                                                <SiGithub size={16} color="currentColor" />
+                                            </a>
+                                        )}
+                                        {(item.liveUrl || item.bscScanUrl) && (
+                                            <a
+                                                href={item.liveUrl || item.bscScanUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-muted transition-colors hover:text-theme"
+                                                aria-label={item.bscScanUrl ? "BscScan" : t("projects.demoLink")}
+                                            >
+                                                <ExternalLink size={16} />
+                                            </a>
+                                        )}
+                                    </div>
                                 </div>
 
                                 <h3 className="mt-3 text-xl font-semibold text-theme">
