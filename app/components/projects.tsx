@@ -67,7 +67,6 @@ export default function Projects({ t }: { t: TranslationFn }) {
                     </p>
                 </div>
 
-                {/* Cuadrícula perfecta de 2x2 en pantallas grandes (lg:grid-cols-2) */}
                 <div className="mt-12 grid gap-6 sm:grid-cols-1 lg:grid-cols-2 items-stretch">
                     {cards.map((item, idx) => (
                         <div 
@@ -80,7 +79,6 @@ export default function Projects({ t }: { t: TranslationFn }) {
                                         {item.label}
                                     </p>
                                     
-                                    {/* Iconos de enlaces (Solo si es un proyecto y tiene urls asignadas) */}
                                     {item.type === "project" && (
                                         <div className="flex items-center gap-3">
                                             {item.githubUrl && (
@@ -114,14 +112,13 @@ export default function Projects({ t }: { t: TranslationFn }) {
                                 </h3>
                                 <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
                                     {item.description}
-                                network</p>
+                                </p>
                             </div>
-
                             <div className="mt-6 flex flex-wrap gap-2">
                                 {item.stack.map((tech) => (
                                     <span
                                         key={tech}
-                                        className="rounded-full border border-theme px-2.5 py-1 text-xs text-muted"
+                                        className="rounded-full bg-blue-600 dark:bg-blue-500 px-2.5 py-1 text-xs font-semibold text-white shadow-sm"
                                     >
                                         {tech}
                                     </span>
