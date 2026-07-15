@@ -18,6 +18,7 @@ es: {
     "hero.name": "Pablo Abad Goldsmith",
     "hero.roleFrontend": "Desarrollador Frontend",
     "hero.roleStack": "React + TypeScript + Tailwind",
+    "hero.iaBigData": "IA y Big Data",
     //about
     "about.imageAlt": "Pablo Abad",
     "about.title": "Sobre mí",
@@ -76,7 +77,7 @@ es: {
     "education.ecommerceCourseTitle": "Curso de E-commerce",
     "education.ecommerceCoursePlatform": "Google Activate y Escuela de Organización Industrial (EOI)",
     // contact
-    "contact.title": "Hablamos",
+    "contact.title": "Contacto",
     "contact.description": "Estoy en búsqueda activa de nuevos retos profesionales. Si crees que mi perfil encaja en tu equipo, no dudes en escribirme.",
     "contact.emailLink": "Enlace de correo",
     "contact.linkedinLink": "Perfil de LinkedIn",
@@ -108,6 +109,7 @@ es: {
     "hero.name": "Pablo Abad Goldsmith",
     "hero.roleFrontend": "Frontend Developer",
     "hero.roleStack": "React + TypeScript + Tailwind",
+    "hero.iaBigData": "IA y Big Data",
     //about
     "about.imageAlt": "Pablo Abad",
     "about.title": "About me",

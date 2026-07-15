@@ -9,7 +9,7 @@ interface EducationItem {
     period: string;
     description?: string;
     current?: boolean;
-    icon: React.ComponentType<{ className?: string }>;
+    icon: React.ComponentType<React.SVGProps<SVGSVGElement> & { size?: number }>;
 }
 
 interface ShortCourseItem {
@@ -67,11 +67,15 @@ export default function Education({ t }: { t: TranslationFn }) {
                             <div key={index} className="relative flex gap-6 sm:gap-8">
                                 <div
                                     className={`relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 transition-colors duration-300 ${item.current
-                                        ? "border-primary bg-primary text-white scale-105"
+                                        ? "border-primary bg-primary scale-105"
                                         : "border-theme bg-surface text-muted"
                                         }`}
                                 >
-                                    <Icon className="h-5 w-5" />
+                                    <Icon
+                                        size={20}
+                                        className="transition-colors duration-300"
+                                        color={item.current ? "currentColor" : undefined}
+                                    />
                                 </div>
 
                                 <div className="flex flex-col pt-1">

@@ -52,7 +52,7 @@ function useTypewriter(words: string[]) {
 }
 
 export default function Hero({ t }: { t: TranslationFn }) {
-    const roles = [t("hero.roleFrontend"), t("hero.roleStack")];
+    const roles = [t("hero.roleFrontend"), t("hero.roleStack"), t("hero.iaBigData")];
     const typed = useTypewriter(roles);
 
     return (
