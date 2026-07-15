@@ -1,5 +1,6 @@
-{
-  "es": {
+const locales = {
+es: {
+    // navbar
     "navbar.name": "PAG",
     "navbar.about": "Sobre mi",
     "navbar.experience": "Experiencia",
@@ -13,13 +14,16 @@
     "navbar.english": "English",
     "navbar.spanish": "Español",
     "navbar.viewOnGitHub": "Ver en GitHub",
+    // hero
     "hero.name": "Pablo Abad Goldsmith",
     "hero.roleFrontend": "Desarrollador Frontend",
     "hero.roleStack": "React + TypeScript + Tailwind",
+    //about
     "about.imageAlt": "Pablo Abad",
     "about.title": "Sobre mí",
     "about.paragraph1": "Soy desarrollador frontend con cerca de dos años de experiencia profesional, especializado en construir interfaces limpias y cuidadas con React, Next.js y TypeScript.",
     "about.paragraph2": "Me interesa entender no solo cómo se ve un producto, sino cómo está construido por dentro — por eso complemento el frontend con incursiones en blockchain, ciberseguridad e IA, y ahora mismo estoy ampliando conocimientos en Big Data.",
+    // skills
     "skills.title": "Habilidades",
     "skills.cybersecurity": "Ciberseguridad",
     "skills.aiBigData": "IA y Big Data",
@@ -27,6 +31,7 @@
     "skills.imageEditing": "Edición de Imagen (PS/AI)",
     "skills.videoEditing": "Edición de Video (Pr/AE)",
     "skills.audioProduction": "Producción de Audio (DAW)",
+    // projects
     "projects.sectionLabel": "Experiencia y proyectos",
     "projects.title": "Un recorrido práctico, sin complicarlo demasiado",
     "projects.intro": "He trabajado en productos reales y también he construido ideas propias, siempre con el foco en resolver problemas con código claro y mantenible.",
@@ -38,6 +43,7 @@
     "projects.projectDescription": "Aplicación personal para gestionar el inventario y las operaciones de una máquina expendedora.",
     "projects.codeLink": "Ver código",
     "projects.demoLink": "Ver demo",
+    // education
     "education.title": "Educación",
     "education.specializationTitle": "Curso de especialización en IA y Big Data",
     "education.specializationInstitution": "IES Teis, Vigo",
@@ -60,6 +66,7 @@
     "education.marketingCoursePlatform": "Google Activate e IAB Spain",
     "education.ecommerceCourseTitle": "Curso de E-commerce",
     "education.ecommerceCoursePlatform": "Google Activate y Escuela de Organización Industrial (EOI)",
+    // contact
     "contact.title": "Hablamos",
     "contact.description": "Estoy en búsqueda activa de nuevos retos profesionales. Si crees que mi perfil encaja en tu equipo, no dudes en escribirme.",
     "contact.emailLink": "Enlace de correo",
@@ -70,10 +77,11 @@
     "contact.email": "Email",
     "contact.message": "Mensaje",
     "contact.submit": "Enviar mensaje",
+    // footer
     "footer.copyright": "© 2026 Pablo Abad",
     "footer.backToTop": "Volver arriba"
-  },
-  "en": {
+  },en: {
+    // navbar
     "navbar.name": "PAG",
     "navbar.about": "About Me",
     "navbar.experience": "Experience",
@@ -87,13 +95,16 @@
     "navbar.english": "English",
     "navbar.spanish": "Español",
     "navbar.viewOnGitHub": "View on GitHub",
+    // hero
     "hero.name": "Pablo Abad Goldsmith",
     "hero.roleFrontend": "Frontend Developer",
     "hero.roleStack": "React + TypeScript + Tailwind",
+    //about
     "about.imageAlt": "Pablo Abad",
     "about.title": "About me",
     "about.paragraph1": "I am a frontend developer with nearly two years of professional experience, specialized in building clean and polished interfaces with React, Next.js, and TypeScript.",
     "about.paragraph2": "I am interested in understanding not only how a product looks, but also how it is built underneath — that is why I complement frontend work with explorations in blockchain, cybersecurity, and AI, and I am currently expanding my knowledge in Big Data.",
+    // skills
     "skills.title": "Skills",
     "skills.cybersecurity": "Cybersecurity",
     "skills.aiBigData": "AI & Big Data",
@@ -101,6 +112,7 @@
     "skills.imageEditing": "Image Editing (PS/AI)",
     "skills.videoEditing": "Video Editing (Pr/AE)",
     "skills.audioProduction": "Audio Production (DAW)",
+    // projects
     "projects.sectionLabel": "Experience and projects",
     "projects.title": "A practical path, without overcomplicating it",
     "projects.intro": "I have worked on real products and also built my own ideas, always focusing on solving problems with clear and maintainable code.",
@@ -112,6 +124,7 @@
     "projects.projectDescription": "A personal app for managing inventory and operations for a vending machine.",
     "projects.codeLink": "View code",
     "projects.demoLink": "View demo",
+    // education
     "education.title": "Education",
     "education.specializationTitle": "Specialization Course in AI and Big Data",
     "education.specializationInstitution": "IES Teis, Vigo",
@@ -134,6 +147,7 @@
     "education.marketingCoursePlatform": "Google Activate & IAB Spain",
     "education.ecommerceCourseTitle": "E-commerce Course",
     "education.ecommerceCoursePlatform": "Google Activate & School of Industrial Organization (EOI)",
+    // contact
     "contact.title": "Let’s talk",
     "contact.description": "I'm actively seeking new professional challenges. If you think my profile is a good fit for your team, feel free to reach out.",
     "contact.emailLink": "Email link",
@@ -144,7 +158,10 @@
     "contact.email": "Email",
     "contact.message": "Message",
     "contact.submit": "Send message",
+    // footer
     "footer.copyright": "© 2026 Pablo Abad",
     "footer.backToTop": "Back to top"
   }
-}
+} as const;
+
+export default locales;
