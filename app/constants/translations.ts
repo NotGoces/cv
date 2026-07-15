@@ -7,7 +7,10 @@ export type TranslationFn = (key: string) => string;
 const localeMap = locales as Record<Lang, Record<string, string>>;
 
 export const createT = (lang: Lang): TranslationFn => {
-  return (key: string): string => {
-    return localeMap[lang][key] ?? localeMap.es[key] ?? key;
+  return (key: string): string => { 
+    //descomentar la linea para modo debug de traducciones
+    return key;
+    //comentar la linea para modo normal de traducciones
+  //return localeMap[lang][key] ?? localeMap.es[key] ?? key;
   };
 };
