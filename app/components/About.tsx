@@ -10,7 +10,7 @@ export default function About({ t }: { t: TranslationFn }) {
                 <div className="w-full max-w-[140px] shrink-0 sm:max-w-[180px] md:max-w-[220px]">
                     <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-theme bg-surface-muted">
                         <Image
-                            src="/projects/pabloabad.jpg"
+                            src="/projects/pabloabad.webp"
                             alt={t("about.imageAlt")}
                             fill
                             sizes="(max-width: 768px) 100vw, 240px"
