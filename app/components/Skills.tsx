@@ -15,8 +15,21 @@ import {
     SiCss,
     SiJavascript,
     SiSolidity,
+    SiPython,
+    SiLua,
+    SiFigma,
+    SiGithub,
+    SiGit,
+    SiAudacity,
+    SiArduino,
+    SiClaude,
+    SiGooglegemini,
+    SiJira,
 } from "@icons-pack/react-simple-icons";
-import { ShieldCheck, BrainCircuit } from "lucide-react";
+import { TbBrandAdobePremiere, TbBrandAdobePhotoshop } from "react-icons/tb";
+import { VscVscode } from "react-icons/vsc";
+import { FaFileWord, FaFileExcel, FaJava } from "react-icons/fa6";
+import { BrainCircuit } from "lucide-react";
 import type { ComponentType } from "react";
 import type { TranslationFn } from "../constants/translations";
 
@@ -32,11 +45,31 @@ const getSkills = (t: TranslationFn): Skill[] => [
     { name: "TypeScript", icon: SiTypescript, brandColor: "#3178C6" },
     { name: "JavaScript", icon: SiJavascript, brandColor: "#F7DF1E" },
     { name: "Tailwind CSS", icon: SiTailwindcss, brandColor: "#06B6D4" },
+
     { name: "HTML5", icon: SiHtml5, brandColor: "#E34F26" },
     { name: "CSS3", icon: SiCss, brandColor: "#1572B6" },
-    { name: "Solidity", icon: SiSolidity },
-    { name: t("skills.cybersecurity"), icon: ShieldCheck },
+    { name: "Python", icon: SiPython, brandColor: "#3776AB" },
+    { name: "LUA", icon: SiLua, brandColor: "#00979D" },
+    { name: "Java", icon: FaJava, brandColor: "#007396" },
+
     { name: t("skills.aiBigData"), icon: BrainCircuit },
+    { name: "Claude", icon: SiClaude, brandColor: "#D97757" },
+    { name: "Gemini", icon: SiGooglegemini, brandColor: "#4285F4" },
+    { name: "Solidity", icon: SiSolidity },
+    { name: t("skills.arduinoProcessing"), icon: SiArduino, brandColor: "#03989F" },
+
+    { name: "Figma", icon: SiFigma, brandColor: "#F24E1E" },
+    { name: t("skills.imageEditing"), icon: TbBrandAdobePhotoshop, brandColor: "#31A8FF" },
+    { name: t("skills.videoEditing"), icon: TbBrandAdobePremiere, brandColor: "#E281FE" },
+    { name: t("skills.audioProduction"), icon: SiAudacity, brandColor: "#0000E5" },
+    { name: "vscode", icon: VscVscode, brandColor: "#0078D4" },
+
+    { name: "GitHub", icon: SiGithub },
+    { name: "Git", icon: SiGit, brandColor: "#F05032" },
+    { name: "Jira", icon: SiJira, brandColor: "#0052CC" },
+    { name: "Excel", icon: FaFileExcel, brandColor: "#217346" },
+    { name: "Word", icon: FaFileWord, brandColor: "#2B579A" },
+
 ];
 
 export default function Skills({ t }: { t: TranslationFn }) {
