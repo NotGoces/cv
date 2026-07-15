@@ -34,13 +34,15 @@ interface Skill {
     brandColor?: string;
 }
 
-// Wrapper para forzar a las banderas a ser un cuadrado perfecto de 30x30px
 const FlagWrapper = (FlagComponent: ComponentType<{ className?: string }>) => {
     return function FlagIcon({ size = 30 }: { size?: number }) {
+        const width = size;
+        const height = Math.round(size * 0.66);
+
         return (
             <div 
-                className="overflow-hidden rounded-full border border-neutral-200 dark:border-neutral-800"
-                style={{ width: `${size}px`, height: `${size}px` }}
+                className="overflow-hidden"
+                style={{ width: `${width}px`, height: `${height}px` }}
             >
                 <FlagComponent className="h-full w-full object-cover" />
             </div>
