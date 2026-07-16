@@ -49,7 +49,7 @@ export default function Home() {
   return (
     <>
       <Navbar t={t} lang={lang} setLang={setLang} darkMode={darkMode} setDarkMode={setDarkMode} />
-      <main>
+      <main className="flex-1 w-full">
         <Hero t={t} />
         <About t={t} />
         <Projects t={t} />
