@@ -92,6 +92,8 @@ es: {
     "contact.email": "Email",
     "contact.message": "Mensaje",
     "contact.submit": "Enviar mensaje",
+    "contact.success":"¡Mensaje enviado con éxito!",
+    "contact.error":"Hubo un error al enviar el mensaje. Inténtalo de nuevo.",
     // footer
     "footer.copyright": "© 2026 Pablo Abad",
     "footer.backToTop": "Volver arriba"
@@ -188,6 +190,8 @@ es: {
     "contact.email": "Email",
     "contact.message": "Message",
     "contact.submit": "Send message",
+    "contact.success":"Message sent successfully!",
+    "contact.error":"There was an error sending the message. Please try again.",
     // footer
     "footer.copyright": "© 2026 Pablo Abad",
     "footer.backToTop": "Back to top"
