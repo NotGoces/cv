@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Personal Web Resume & Portfolio
 
-## Getting Started
+An interactive, responsive, and multilingual personal portfolio and web resume built using **Next.js 14/15, TypeScript, and Tailwind CSS**. 
 
-First, run the development server:
+> 🔗 **Live Demo:** [Pablo Abad Cv](https://pabloabad.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Multilingual Support:** Seamlessly toggle between English and Spanish.
+- **Modern UI/UX:** Clean, elegant dark/light theme designed around accessibility and modern web aesthetics.
+- **Fast & Optimized:** Leveraging Next.js App Router and server-side optimizations.
+- **Responsive Design:** Fully tailored layouts for mobile, tablet, and desktop viewports.
+- **Downloadable Resume:** Direct integration to view and download a polished PDF version of my CV.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Tech Stack & Key Libraries
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework:** Next.js (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS (with native CSS variables and dark mode configuration)
+- **Icons:** React Icons
+- **Fonts:** Geist & Geist Mono (Next.js font optimization)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Getting Started
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To run this project locally, follow these steps:
