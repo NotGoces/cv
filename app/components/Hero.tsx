@@ -56,18 +56,18 @@ export default function Hero({ t }: { t: TranslationFn }) {
     const typed = useTypewriter(roles);
 
     return (
-        <section className="relative flex min-h-[40vh] w-full flex-col items-center justify-center bg-theme px-6 transition-colors duration-300">
+        <section className="relative flex min-h-[40vh] w-full flex-col items-center justify-center bg-theme px-6 py-12 transition-colors duration-300">
             <div className="mx-auto flex w-full max-w-5xl flex-col items-start">
-                <h1 className="text-5xl font-semibold tracking-tight text-theme sm:text-7xl">
+                <h1 className="text-4xl font-semibold tracking-tight text-theme xs:text-5xl sm:text-7xl">
                     {t("hero.name")}
                 </h1>
 
-                <div className="mt-5 flex items-center font-mono text-lg text-muted sm:text-2xl">
-                    <span className="mr-2 text-muted/60">&gt;</span>
-                    <span>{typed}</span>
+                <div className="mt-5 flex items-start font-mono text-base text-muted sm:text-2xl sm:items-center">
+                    <span className="mr-2 text-muted/60 shrink-0">&gt;</span>
+                    <span className="break-words">{typed}</span>
                     <span
                         aria-hidden="true"
-                        className="ml-1 inline-block h-[1.1em] w-[2px] animate-[blink_1s_steps(1)_infinite] bg-muted"
+                        className="ml-1 inline-block h-[1.1em] w-[2px] shrink-0 animate-[blink_1s_steps(1)_infinite] bg-muted"
                     />
                 </div>
             </div>

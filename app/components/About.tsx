@@ -5,21 +5,21 @@ import type { TranslationFn } from "../constants/translations";
 
 export default function About({ t }: { t: TranslationFn }) {
     return (
-        <section id="about" className="w-full bg-theme px-6 py-24 transition-colors duration-300">
-            <div className="mx-auto flex w-full max-w-5xl flex-row items-center gap-6 sm:gap-8 md:gap-12">
-                <div className="w-full max-w-[140px] shrink-0 sm:max-w-[180px] md:max-w-[220px]">
+        <section id="about" className="w-full bg-theme px-6 py-16 sm:py-24 transition-colors duration-300">
+            <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-8 sm:flex-row sm:items-start sm:gap-8 md:gap-12">
+               <div className="w-full max-w-[160px] shrink-0 sm:max-w-[180px] md:max-w-[220px]">
                     <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-theme bg-surface-muted">
                         <Image
                             src="/projects/pabloabad.webp"
                             alt={t("about.imageAlt")}
                             fill
-                            sizes="(max-width: 768px) 100vw, 240px"
+                            sizes="(max-width: 768px) 160px, 240px"
                             className="object-cover"
+                            priority 
                         />
                     </div>
                 </div>
-
-                <div className="flex flex-1 flex-col items-start">
+                <div className="flex flex-1 flex-col items-center text-center sm:items-start sm:text-left">
                     <h2 className="text-3xl font-semibold tracking-tight text-theme sm:text-4xl">
                         {t("about.title")}
                     </h2>
