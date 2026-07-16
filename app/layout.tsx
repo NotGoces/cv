@@ -15,6 +15,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Pablo Abad Goldsmith CV",
   description: "Desarrollador Front-End",
+  icons: {
+    icon: [
+      {
+        url: "/projects/pag.svg",
+        type: "image/svg+xml",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
