@@ -28,7 +28,7 @@ export default function Contact({ t }: { t: TranslationFn }) {
                     Accept: "application/json",
                 },
                 body: JSON.stringify({
-                    access_key: "de0d30cc-46fc-4f11-b3a6-ccdd7bddac45", 
+                    access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY, 
                     name: name,
                     email: email,
                     message: message,
