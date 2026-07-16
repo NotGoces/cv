@@ -12,28 +12,25 @@ import Footer from "./components/footer";
 import { Lang, createT } from "./constants/translations";
 
 export default function Home() {
-  const [lang, setLang] = useState<Lang>(() => {
-    if (typeof window === "undefined") {
-      return "es";
-    }
+  const [lang, setLang] = useState<Lang>("es");
+  const [darkMode, setDarkMode] = useState<boolean>(true);
 
+  const t = createT(lang);
+
+  useEffect(() => {
     const savedLang = window.localStorage.getItem("lang") as Lang | null;
-    return savedLang === "es" || savedLang === "en" ? savedLang : "es";
-  });
-  const [darkMode, setDarkMode] = useState<boolean>(() => {
-    if (typeof window === "undefined") {
-      return true;
+    if (savedLang === "es" || savedLang === "en") {
+      setLang(savedLang);
     }
 
     const savedTheme = window.localStorage.getItem("theme");
     if (savedTheme === "light" || savedTheme === "dark") {
-      return savedTheme === "dark";
+      setDarkMode(savedTheme === "dark");
+    } else {
+      const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setDarkMode(systemPrefersDark);
     }
-
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
-  });
-
-  const t = createT(lang);
+  }, []);
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", darkMode);
