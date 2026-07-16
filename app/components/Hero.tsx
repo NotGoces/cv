@@ -63,16 +63,30 @@ export default function Hero({ t }: { t: TranslationFn }) {
                 </h1>
 
                 <div className="mt-5 flex items-start font-mono text-base text-muted sm:text-2xl sm:items-center">
-                    <span className="mr-2 text-muted/60 shrink-0">&gt;</span>
-                    <span className="break-words">{typed}</span>
+                    <span className="mr-2 shrink-0 select-none terminal-text">&gt;</span>
+                    <span className="break-words terminal-text">{typed}</span>
                     <span
                         aria-hidden="true"
-                        className="ml-1 inline-block h-[1.1em] w-[2px] shrink-0 animate-[blink_1s_steps(1)_infinite] bg-muted"
+                        className="ml-1 inline-block h-[1.1em] w-[2px] shrink-0 animate-[blink_1s_steps(1)_infinite] terminal-cursor"
                     />
                 </div>
             </div>
-
             <style jsx>{`
+                .terminal-text {
+                    color: #2B7FFF;
+                    transition: color 0.25s ease;
+                }
+                .terminal-cursor {
+                    background-color: #2B7FFF;
+                    transition: background-color 0.25s ease;
+                }
+                :global(html.dark) .terminal-text {
+                    color: #00ff66;
+                }
+                :global(html.dark) .terminal-cursor {
+                    background-color: #00ff66;
+                }
+
                 @keyframes blink {
                     0%,
                     50% {
