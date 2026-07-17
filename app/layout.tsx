@@ -15,8 +15,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://pabloabad.vercel.app"),
-  title: "Pablo Abad Goldsmith CV",
-  description: "Desarrollador Front-End",
+  title: "Pablo Abad Goldsmith | Front-End & Full-Stack Developer",
+  description: "Professional portfolio and CV of Pablo Abad Goldsmith. Front-End Developer specializing in building modern web applications with React, Next.js, TypeScript, and Tailwind CSS.",
+  keywords: ["Pablo Abad Goldsmith", "Front-End Developer", "Full-Stack Developer", "Web Developer", "React", "Next.js", "TypeScript", "CV", "Portfolio"],
+  authors: [{ name: "Pablo Abad Goldsmith" }],
+  creator: "Pablo Abad Goldsmith",
   icons: {
     icon: [
       {
@@ -26,8 +29,8 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Pablo Abad Goldsmith CV",
-    description: "Desarrollador Front-End",
+    title: "Pablo Abad Goldsmith | Front-End & Full-Stack Developer",
+    description: "Explore the professional portfolio of Pablo Abad Goldsmith. Modern web projects, interactive applications, and efficient software engineering solutions.",
     url: "https://pabloabad.vercel.app/",
     siteName: "Pablo Abad Goldsmith CV",
     images: [
@@ -35,15 +38,16 @@ export const metadata: Metadata = {
         url: "/projects/social_preview.png",
         width: 1280,
         height: 640,
-        alt: "Pablo Abad Goldsmith - CV",
+        alt: "Pablo Abad Goldsmith - CV & Professional Portfolio",
       },
     ],
+    locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pablo Abad Goldsmith CV",
-    description: "Desarrollador Front-End",
+    title: "Pablo Abad Goldsmith | Front-End Developer",
+    description: "Professional portfolio and CV of Pablo Abad Goldsmith. Front-End Developer specializing in React, Next.js, and TypeScript.",
     images: ["/projects/social_preview.png"],
   },
 };
