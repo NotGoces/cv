@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pablo Abad Goldsmith | Front-End & Full-Stack Developer",
     description: "Explore the professional portfolio of Pablo Abad Goldsmith. Modern web projects, interactive applications, and efficient software engineering solutions.",
-    url: "https://pabloabad.vercel.app/",
+    url: "https://pabloabad.vercel.app",
     siteName: "Pablo Abad Goldsmith CV",
     images: [
       {
