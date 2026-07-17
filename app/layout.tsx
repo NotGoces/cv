@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "Pablo Abad Goldsmith CV",
     images: [
       {
-        url: "/projects/social_preview.png",
+        url: "/projects/socialpreview.png",
         width: 1280,
         height: 640,
         alt: "Pablo Abad Goldsmith - CV & Professional Portfolio",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Pablo Abad Goldsmith | Front-End Developer",
     description: "Professional portfolio and CV of Pablo Abad Goldsmith. Front-End Developer specializing in React, Next.js, and TypeScript.",
-    images: ["/projects/social_preview.png"],
+    images: ["/projects/socialpreview.png"],
   },
 };
 
