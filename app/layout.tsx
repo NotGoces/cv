@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://pabloabad.vercel.app"),
   title: "Pablo Abad Goldsmith CV",
   description: "Desarrollador Front-End",
   icons: {
@@ -23,6 +24,27 @@ export const metadata: Metadata = {
         type: "image/svg+xml",
       },
     ],
+  },
+  openGraph: {
+    title: "Pablo Abad Goldsmith CV",
+    description: "Desarrollador Front-End",
+    url: "https://pabloabad.vercel.app/",
+    siteName: "Pablo Abad Goldsmith CV",
+    images: [
+      {
+        url: "/projects/social_preview.png",
+        width: 1280,
+        height: 640,
+        alt: "Pablo Abad Goldsmith - CV",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pablo Abad Goldsmith CV",
+    description: "Desarrollador Front-End",
+    images: ["/projects/social_preview.png"],
   },
 };
 
