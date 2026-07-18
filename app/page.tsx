@@ -50,8 +50,8 @@ export default function Home() {
         <Hero t={t} />
         <About t={t} />
         <Projects t={t} />
-        <Skills t={t} />
         <Education t={t} />
+        <Skills t={t} />
         <Contact t={t} />
       </main>
       <Footer t={t} />

@@ -26,7 +26,7 @@ export default function Navbar({ t, lang, setLang, darkMode, setDarkMode }: Navb
         </div>
         <div className="flex items-center gap-6 sm:gap-8">
           <div className="hidden sm:flex items-center gap-6 sm:gap-8">
-          {["about", "experience", "skills", "education", "contact"].map((section) => (
+          {["about", "experience", "education", "skills", "contact"].map((section) => (
             <a
               key={section}
               href={`#${section}`}
