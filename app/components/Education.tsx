@@ -104,7 +104,7 @@ export default function Education({ t }: { t: TranslationFn }) {
                                 <BookOpen className="h-4 w-4" />
                             </div>
                             <h4 className="text-xs font-bold uppercase tracking-widest text-muted/50 pt-1">
-                                {t("education.extraCoursesTitle") || "Cursos y Certificaciones"}
+                                {t("education.extraCoursesTitle")}
                             </h4>
                         </div>
 

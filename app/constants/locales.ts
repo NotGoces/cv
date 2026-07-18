@@ -24,6 +24,9 @@ es: {
     "about.title": "Sobre mí",
     "about.paragraph1": "Soy desarrollador frontend con dos años de experiencia profesional, especializado en construir interfaces limpias y cuidadas con React, Next.js y TypeScript.",
     "about.paragraph2": "Me interesa entender no solo cómo se ve un producto, sino cómo está construido por dentro, por eso complemento el frontend con incursiones en otras ramas, como en mi especialización actual en Big Data e Inteligencia Artificial.",
+    //download
+    "download.downloadBtn": "Descargar CV en Pdf",
+    "download.downloadingBtn": "Descargando",
     // skills
     "skills.title": "Habilidades",
     "skills.cybersecurity": "Ciberseguridad",
@@ -122,6 +125,9 @@ es: {
     "about.title": "About me",
     "about.paragraph1": "I am a frontend developer with two years of professional experience, specialized in building clean and well-crafted interfaces with React, Next.js, and TypeScript.",
     "about.paragraph2": "I am interested in understanding not only how a product looks but also how it is built internally, which is why I complement frontend development with forays into other areas, such as my current specialization in Big Data and Artificial Intelligence.",
+    //download
+    "download.downloadBtn": "Download CV as PDF",
+    "download.downloadingBtn": "Downloading",
     // skills
     "skills.title": "Skills",
     "skills.cybersecurity": "Cybersecurity",

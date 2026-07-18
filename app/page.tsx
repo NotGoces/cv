@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Download from "./components/Download";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
@@ -49,6 +50,7 @@ export default function Home() {
       <main className="flex-1 w-full">
         <Hero t={t} />
         <About t={t} />
+        <Download t={t} />
         <Projects t={t} />
         <Education t={t} />
         <Skills t={t} />
