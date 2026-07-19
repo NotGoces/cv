@@ -6,7 +6,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { Mail, Loader2 } from "lucide-react"; // Importamos un spinner para el estado de carga
 import type { TranslationFn } from "../constants/translations";
 
-const EMAIL = "gocesmusic@gmail.com";
+const EMAIL = "pabloabad.dev@gmail.com";
 
 export default function Contact({ t }: { t: TranslationFn }) {
     const [name, setName] = useState("");

@@ -36,7 +36,7 @@ export default function Footer({ t }: { t: TranslationFn }) {
                         <FaGithub size={16} />
                     </a>
                     <a
-                        href="mailto:gocesmusic@gmail.com"
+                        href="mailto:pabloabad.dev@gmail.com"
                         aria-label="Email"
                         className="transition-colors hover:text-theme"
                     >
