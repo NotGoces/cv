@@ -25,7 +25,7 @@ es: {
     "about.paragraph1": "Soy desarrollador frontend con dos años de experiencia profesional, especializado en construir interfaces limpias y cuidadas con React, Next.js y TypeScript.",
     "about.paragraph2": "Me interesa entender no solo cómo se ve un producto, sino cómo está construido por dentro, por eso complemento el frontend con incursiones en otras ramas, como en mi especialización actual en Big Data e Inteligencia Artificial.",
     //download
-    "download.downloadBtn": "Descargar CV en Pdf",
+    "download.downloadBtn": "Descargar CV en PDF",
     "download.downloadingBtn": "Descargando",
     // skills
     "skills.title": "Habilidades",
