@@ -23,8 +23,8 @@ import {
 import { TbBrandAdobePremiere, TbBrandAdobePhotoshop } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
 import { FaFileWord, FaFileExcel, FaJava, FaCar, FaMotorcycle } from "react-icons/fa6";
-import { BrainCircuit } from "lucide-react";
-import { ES, GB, FR } from "country-flag-icons/react/3x2";
+import { BrainCircuit, Users } from "lucide-react";
+import { ES, GB } from "country-flag-icons/react/3x2";
 import type { ComponentType } from "react";
 import type { TranslationFn } from "../constants/translations";
 
@@ -53,9 +53,9 @@ const FlagWrapper = (FlagComponent: ComponentType<{ className?: string }>) => {
 const getSkills = (t: TranslationFn): Skill[] => [
     { name: t("skills.spanish"), icon: FlagWrapper(ES) }, 
     { name: t("skills.english"), icon: FlagWrapper(GB) }, 
-    { name: t("skills.french"), icon: FlagWrapper(FR) }, 
     { name: t("skills.drivingLicenseB"), icon: FaCar },
     { name: t("skills.drivingLicenseA2"), icon: FaMotorcycle },
+    { name: t("skills.teamWork"), icon: Users }, 
 
     { name: "React", icon: SiReact, brandColor: "#61DAFB" },
     { name: "Next.js", icon: SiNextdotjs },
