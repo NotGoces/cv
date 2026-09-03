@@ -10,16 +10,23 @@ interface CardItem {
     description: string;
     stack: string[];
     githubUrl?: string;
-    bscScanUrl?: string;
+    websiteUrl?: string;
 }
 
 const getCards = (t: TranslationFn): CardItem[] => [
     {
         label: t("projects.experienceLabel"),
-        title: t("projects.experienceTitle"),
-        description: t("projects.experienceDescription"),
+        title: t("projects.cofricoTitle"),
+        description: t("projects.cofricoDescription"),
         stack: ["React", "JavaScript", "Tailwind CSS", "HTML"],
         githubUrl: "https://github.com/pabadcofrico",
+    },
+    {
+        label: t("projects.projectLabel"),
+        title: t("projects.clinicaTitle"),
+        description: t("projects.clinicaDescription"),
+        stack: ["Astro", "Sanity CMS", "TypeScript", "React", "Vercel"],
+        websiteUrl: "https://www.clinicadentalpablovarela.com/",
     },
     {
         label: t("projects.projectLabel"),
@@ -33,7 +40,7 @@ const getCards = (t: TranslationFn): CardItem[] => [
         title: t("projects.tokenTitle"),
         description: t("projects.tokenDescription"),
         stack: ["Solidity", t("projects.smartContracts"), "BSC", "BEP-20"],
-        bscScanUrl: "https://bscscan.com/token/0x9d6cF9CD0a28fbbC954C253AF6d870E6407909c3",
+        websiteUrl: "https://bscscan.com/token/0x9d6cF9CD0a28fbbC954C253AF6d870E6407909c3",
     },
     {
         label: t("projects.cvProjectLabel"),
@@ -85,14 +92,14 @@ export default function Projects({ t }: { t: TranslationFn }) {
                                                 <SiGithub size={16} color="currentColor" />
                                             </a>
                                         )}
-                                        {item.bscScanUrl && (
+                                        {item.websiteUrl && (
                                             <a
-                                                href={item.bscScanUrl}
+                                                href={item.websiteUrl}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="text-muted transition-colors hover:text-theme"
-                                                aria-label={t("projects.bscScanLink")}
-                                                title={t("projects.bscScanLink")}
+                                                aria-label={t("projects.websiteUrl")}
+                                                title={t("projects.websiteUrl")}
                                             >
                                                 <ExternalLink size={16} />
                                             </a>
