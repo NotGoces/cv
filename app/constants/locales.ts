@@ -39,7 +39,7 @@ es: {
     "skills.english": "Inglés Avanzado",
     "skills.teamWork": "Trabajo en Equipo",
     "skills.drivingLicenseB": "Carnet B (coche propio)",
-    "skills.drivingLicenseA2": "Carnet A2 (moto propia)",
+    "skills.drivingLicenseA": "Carnet A (moto propia)",
     // projects
     "projects.sectionLabel": "Experiencia y proyectos",
     "projects.title": "Portfolio profesional",
@@ -140,7 +140,7 @@ es: {
     "skills.english": "Advanced English",
     "skills.teamWork": "Teamwork",
     "skills.drivingLicenseB": "License B (own car)",
-    "skills.drivingLicenseA2": "License A2 (own bike)",
+    "skills.drivingLicenseA": "License A (own bike)",
     // projects
     "projects.sectionLabel": "Experience and projects",
     "projects.title": "Professional Portfolio",

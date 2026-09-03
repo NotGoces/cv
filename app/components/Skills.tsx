@@ -54,7 +54,7 @@ const getSkills = (t: TranslationFn): Skill[] => [
     { name: t("skills.spanish"), icon: FlagWrapper(ES) }, 
     { name: t("skills.english"), icon: FlagWrapper(GB) }, 
     { name: t("skills.drivingLicenseB"), icon: FaCar },
-    { name: t("skills.drivingLicenseA2"), icon: FaMotorcycle },
+    { name: t("skills.drivingLicenseA"), icon: FaMotorcycle },
     { name: t("skills.teamWork"), icon: Users }, 
 
     { name: "React", icon: SiReact, brandColor: "#61DAFB" },
