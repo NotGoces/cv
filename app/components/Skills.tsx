@@ -83,7 +83,7 @@ const getSkills = (t: TranslationFn): Skill[] => [
     { name: t("skills.videoEditing"), icon: TbBrandAdobePremiere, brandColor: "#E281FE" },
 
     
-    { name: "vscode", icon: VscVscode, brandColor: "#0078D4" },
+    { name: "VSCode", icon: VscVscode, brandColor: "#0078D4" },
     { name: "GitHub", icon: SiGithub },
     { name: "Git", icon: SiGit, brandColor: "#F05032" },
     { name: "Jira", icon: SiJira, brandColor: "#0052CC" },
