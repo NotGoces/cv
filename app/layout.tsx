@@ -20,6 +20,27 @@ export const metadata: Metadata = {
   keywords: ["Pablo Abad Goldsmith", "Front-End Developer", "Full-Stack Developer", "Web Developer", "React", "Next.js", "TypeScript", "CV", "Portfolio"],
   authors: [{ name: "Pablo Abad Goldsmith" }],
   creator: "Pablo Abad Goldsmith",
+  // 1. Verificación automática para Google Search Console
+  verification: {
+    google: "-M4n9RSLVsWH-19b3SePFC3eghDQFavvhQsAqRFKiKU",
+  },
+  // 2. Definición explícita de URL canónica
+  alternates: {
+    canonical: "/",
+  },
+
+  // 3. Control explícito de bots de búsqueda
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
     icon: [
       {
@@ -65,6 +86,7 @@ export default function RootLayout({
     >
       <body suppressHydrationWarning className="min-h-full flex flex-col">
         {children}
+        <Analytics />
       </body>
     </html>
   );
