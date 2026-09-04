@@ -36,18 +36,18 @@ const getCards = (t: TranslationFn): CardItem[] => [
         githubUrl: "https://github.com/NotGoces/Maquinas",
     },
     {
-        label: t("projects.blockchainLabel"),
-        title: t("projects.tokenTitle"),
-        description: t("projects.tokenDescription"),
-        stack: ["Solidity", t("projects.smartContracts"), "BSC", "BEP-20"],
-        websiteUrl: "https://bscscan.com/token/0x9d6cF9CD0a28fbbC954C253AF6d870E6407909c3",
-    },
-    {
         label: t("projects.cvProjectLabel"),
         title: t("projects.cvProjectTitle"),
         description: t("projects.cvProjectDescription"),
         stack: ["TypeScript", "React", "Tailwind CSS", t("projects.deployment"), t("projects.responsive")],
         githubUrl: "https://github.com/NotGoces/cv",
+    },
+    {
+        label: t("projects.blockchainLabel"),
+        title: t("projects.tokenTitle"),
+        description: t("projects.tokenDescription"),
+        stack: ["Solidity", t("projects.smartContracts"), "BSC", "BEP-20"],
+        websiteUrl: "https://bscscan.com/token/0x9d6cF9CD0a28fbbC954C253AF6d870E6407909c3",
     }
 ];
 
