@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   creator: "Pablo Abad Goldsmith",
   // 1. Verificación automática para Google Search Console
   verification: {
-    google: "-M4n9RSLVsWH-19b3SePFC3eghDQFavvhQsAqRFKiKU",
+    google: "N58a7Z1TUDHtTtEJA5Flq7rex5fH7WUcv8UHQ4ROBmM",
   },
   // 2. Definición explícita de URL canónica
   alternates: {
