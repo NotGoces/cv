@@ -14,7 +14,8 @@ import {
     SiFigma,
     SiGithub,
     SiGit,
-    SiAudacity,
+    SiSanity,
+    SiAstro,
     SiArduino,
     SiClaude,
     SiGooglegemini,
@@ -72,20 +73,21 @@ const getSkills = (t: TranslationFn): Skill[] => [
     { name: t("skills.aiBigData"), icon: BrainCircuit },
     { name: "Claude", icon: SiClaude, brandColor: "#D97757" },
     { name: "Gemini", icon: SiGooglegemini, brandColor: "#4285F4" },
-    { name: "Solidity", icon: SiSolidity },
-    { name: t("skills.arduinoProcessing"), icon: SiArduino, brandColor: "#03989F" },
+    { name: "Astro", icon: SiAstro, brandColor: "#E114E8" },
+    { name: "Sanity CMS", icon: SiSanity, brandColor: "#F03E2F" },
 
     { name: "Figma", icon: SiFigma, brandColor: "#F24E1E" },
+    { name: "Solidity", icon: SiSolidity },
+    { name: t("skills.arduinoProcessing"), icon: SiArduino, brandColor: "#03989F" },
     { name: t("skills.imageEditing"), icon: TbBrandAdobePhotoshop, brandColor: "#31A8FF" },
     { name: t("skills.videoEditing"), icon: TbBrandAdobePremiere, brandColor: "#E281FE" },
-    { name: t("skills.audioProduction"), icon: SiAudacity, brandColor: "#0000E5" },
-    { name: "vscode", icon: VscVscode, brandColor: "#0078D4" },
 
+    
+    { name: "vscode", icon: VscVscode, brandColor: "#0078D4" },
     { name: "GitHub", icon: SiGithub },
     { name: "Git", icon: SiGit, brandColor: "#F05032" },
     { name: "Jira", icon: SiJira, brandColor: "#0052CC" },
     { name: "Excel", icon: FaFileExcel, brandColor: "#217346" },
-    { name: "Word", icon: FaFileWord, brandColor: "#2B579A" },
 ];
 
 export default function Skills({ t }: { t: TranslationFn }) {
