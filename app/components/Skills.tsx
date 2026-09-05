@@ -23,7 +23,7 @@ import {
 } from "@icons-pack/react-simple-icons";
 import { TbBrandAdobePremiere, TbBrandAdobePhotoshop } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
-import { FaFileWord, FaFileExcel, FaJava, FaCar, FaMotorcycle } from "react-icons/fa6";
+import { FaFileExcel, FaJava, FaCar, FaMotorcycle } from "react-icons/fa6";
 import { BrainCircuit, Users } from "lucide-react";
 import { ES, GB } from "country-flag-icons/react/3x2";
 import type { ComponentType } from "react";
